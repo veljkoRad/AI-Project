@@ -22,13 +22,27 @@
 * ```git log``` details about last commit: commit ID, Author, Date, commit name
 
 ## GitHub Instalation
-
+* Git remote is actualy that folder where I put this project(AI-Project.git)
 *  ```git remote -v``` checks if there is installed get remote in pc.
+* Add new remote to my project which has git repository
+* ```git remote add origin git@github.com:veljkoRad/AI-Project.git```
 * if installed this is what I get:
     ```
     origin  git@github.com:veljkoRad/AI-Project.git (fetch)
     origin  git@github.com:veljkoRad/AI-Project.git (push)
     ```
+    * **origin* is default remote nameg
+* ```git push origin master``` to push from master branch to remote origin
+* before first push I must make mu security check
+    *  in same terminal that i use i type:
+    * Check for an Existing SSH Key
+        * ```ls ~/.ssh```
+    * create new ssh key:
+        * ssh-keygen -t ed25519 -C "radivojevicveljko@gmail.com"
+    * check my ssh key
+        * ```cat ~/.ssh/id_ed25519.pub```
+        * ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGLIe10TJ94C9H3KdfHiHi9c/3O6LWPfUdkkojcWzzVI your-email@example.com
+    * go to github => settings => ssh keys => add new key, paste my ssh key and give title like "My laptop Key" and for work "Job PC Key"
 
 
 
