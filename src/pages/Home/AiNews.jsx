@@ -90,7 +90,7 @@ const AiNews = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     position: 'absolute',
-                    bottom: '-5px',
+                    bottom: '-210px',
                     left: '50%',
                     transform: 'translateX(-50%)',
                     zIndex: 999,

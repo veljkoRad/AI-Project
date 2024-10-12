@@ -5,8 +5,8 @@
 
 * To check is it installed  ```git --version```
 * Addig info that will go with **commits**
-    * git config --global user.name "Your Name"
-    * git config --global user.email "your@email.com"
+    * git config --global user.name "Veljko"
+    * git config --global user.email "radivojevicveljko@gmail.com"
     
 * in terminal go to location of project which you want to put on github
 * ```git init```  (install local repository in this folder )
@@ -19,13 +19,17 @@
     1. ```Changes not staged for commit:``` this files needs to add to stage area
     2. ```Changes to be committed:``` this files need to commit
     3. ```nothing to commit, working tree clean``` - everything is ready for posting on github
-* ```git log``` details about last commit: commit ID, Author, Date, commit name
+* ```git log``` details about  commits: commit ID, Author, Date, commit name
+    * when enter git log now I cannot type anything in terminal because IM navigating commits (up and down arrow).
+    * to finish navigatin press ```q```
 
 ## GitHub Instalation
 * Git remote is actualy that folder where I put this project(AI-Project.git)
 *  ```git remote -v``` checks if there is installed get remote in pc.
 * Add new remote to my project which has git repository
-* ```git remote add origin git@github.com:veljkoRad/AI-Project.git```
+    * ```git remote add origin git@github.com:veljkoRad/AI-Project.git```
+* rename remote
+    * ```git remote rename origin ai-site```
 * if installed this is what I get:
     ```
     origin  git@github.com:veljkoRad/AI-Project.git (fetch)
@@ -43,6 +47,7 @@
         * ```cat ~/.ssh/id_ed25519.pub```
         * ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGLIe10TJ94C9H3KdfHiHi9c/3O6LWPfUdkkojcWzzVI your-email@example.com
     * go to github => settings => ssh keys => add new key, paste my ssh key and give title like "My laptop Key" and for work "Job PC Key"
+
 
 
 
