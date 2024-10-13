@@ -53,13 +53,19 @@
   * Reponsive design
   * Changed all padding values in rem so it would look better because of proportions
     
-  ### 12.10.2024
+### 12.10.2024
+* **GitHub**
   * Installed local git repository for this project
   * Installed remote git for this project
   * Added new ssh key for my laptop
+* **documentation**
   * removed MaterialUI.md as separate file
   * moved React.md in documentation so I can update it same as project
   * created GitHubInstructions.md
+### 13.10.2024
+* **styled components**
+  * Added styled components in newsAI for: section box, section title,everything except Swiper and SwiperSlide..
+
 
 
   **Plan Za Daljee**:

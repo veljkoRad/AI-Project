@@ -22,16 +22,6 @@
 * @emotion - for writing css in JS.
     * I don't use it for now
 *  @emotion/styled 
-    ```
-   import styled from '@emotion/styled';
-   const StyledButton = styled.button`
-        background-color: blue;
-    `;
-
-    function MyComponent() {
-    return <StyledButton>Styled Button</StyledButton>;
-    }
-    ```
 * Packages Added to ```package.json``` (in dependecies) and in ```package-lock.json```
 * Downloaded to node_modules under @mui and @emotion.
 # Creating Default vaules
@@ -69,6 +59,24 @@
     }
   },
 ```
+# Styled Components:
+* This can effectively can help grouping and isolating related styles, avoid inline CSS, and improve reusability.
+* Two types:
+    1. When I don't apply nothing from theme
+        ```
+        const CustomSwiperSlide = styled(SwiperSlide)({
+            display: 'flex'
+        });
+        ```
+    2. When I use color or something from theme
+        ```
+        const Section = styled(Box)(({ theme }) => ({
+            backgroundColor: theme.palette.primary.dark,
+            [theme.breakpoints.down('md')]: {
+               textAlign : 'center',
+            },
+        }));
+        ```
 
 # Material UI Component
 [go to top](#index)
