@@ -65,7 +65,9 @@
 ### 13.10.2024
 * **styled components**
   * Added styled components in newsAI for: section box, section title,everything except Swiper and SwiperSlide..
-
+  * Added textfield style in createTheme
+      * Instead of prop slots defined it with class in createTheme
+  *Added also atributes in styled component.
 
 
   **Plan Za Daljee**:

@@ -77,6 +77,36 @@
             },
         }));
         ```
+    3.  Instead of root: use that children component element
+        ```
+        MuiInputBase: {
+            styleOverrides: {
+                input: ({ theme }) => ({
+                height: '21px',
+                padding: '5px 15px',
+                fontSize: '13px',
+                '&::placeholder': {
+                    color: theme.palette.secondary.main,  // Ensure theme is accessed correctly
+                    fontSize: '13px',
+                    fontWeight: 500,
+                }})
+            },
+        },
+        ```
+    4.   To add atributes in styled components,with or without sx
+    ```
+    const MyTextField=styled((props)=>(
+    <TextField
+      variant="outlined"
+      color='secondary'
+      {...props}
+      size='small'
+      placeholder="Search"
+      focused
+      hiddenLabel      
+    /> 
+    ))({})   
+    ```
 
 # Material UI Component
 [go to top](#index)
@@ -98,7 +128,9 @@
 * Atributes
     * focused - borders shows always
     * hiddenLabel - turn off label animation
-    * slotProps - this is new way of changing placeholder
+    * slotProps  
+        * Not only for TextField , but this option let you style child component .
+        * better than slotprops is to use createTheme, or styled component.
 
 ## 4. Responsive 
 ```<Typograhpy sx={{display:{sm:'none'}}}>Responsive</Typograhpy>```
