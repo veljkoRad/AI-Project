@@ -33,6 +33,7 @@
   * Added bacground component
   * Added container component
   * Banner moved to components so I can use it for other pages
+  * Component atributes will stay inline while styled components should be for styling only
 
 ### 10.10.2024
 
@@ -44,6 +45,7 @@
     * moved singlePostData to data folder as single file for better structure.
     * Instaled Swiper for mobile/tablet responsive.
     * Added Carousel and pagination dots ,Explanation in SwiperJS.md.
+    *Changed names of styled components to be realted to component that are located in.
 
 ### 11.10.2024
 
@@ -68,8 +70,18 @@
   * Added textfield style in createTheme
       * Instead of prop slots defined it with class in createTheme
   *Added also atributes in styled component.
+  ### 14.10.2024
+  * **Code Structure**
+    * Understood that styled component is HOF
+    * Finished styled component
+    * Use my first props to pass to child component (WebinarsPost.jsx)
+    * Moved all styled components to ```HomePageStyled.jsx```
+    * In AiNews.jsx changed code so that I define Card component only once for mobile and desktop
+    * Updated ```README.md``` with more detailed process
 
 
-  **Plan Za Daljee**:
+
+
+  ## **Coding plan**:
+  * Ask chatgpt is my comments good for easier reading code and what can I improve here?
   * material ui animation: (onHover:Blog Post Card hover, navigation bar buttons and logo)
-  * React DevTools

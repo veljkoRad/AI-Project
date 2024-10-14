@@ -1,54 +1,15 @@
 import { Stack, Typography, Box, Card, CardMedia, IconButton } from "@mui/material"
 import { PlayArrow } from "@mui/icons-material"
+import { WebinarCard, WebinarCardMedia, WebinarIconButton } from "../../styles/HomePageStyled"
 
 
-const WebinarsPost = () => {
-    // Video Component
-    const WebinarVideo = () => (
-        <Card
-            component='article'
-            sx={{
-                border: 'none',
-                maxWidth: '100%',
-                flexGrow: 2,
-                backgroundColor: 'primary.dark',
-                display: 'flex',
-                justifyContent: 'space-around',
-                position: 'relative',
-                marginTop: { xs: '25px', md: 0 }
-            }}>
-            <CardMedia
-                component="img"
-                sx={{ width: '100%', maxWidth: '385px' }}
-                image="images/bull-runing.png"
-                alt="bull runing"
-            />
-            <IconButton
-                disableFocusRipple
-                disableRipple
-                color="secondary"
-                sx={{
-                    position: 'absolute',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    backgroundColor: 'secondary.main',
-                    '&:hover': {
-                        backgroundColor: 'secondary.main',
-                        opacity: 0.9
-                    },
-                }}
-            >
-                <PlayArrow sx={{ fontSize: 60, color: 'white' }} />
-            </IconButton>
-        </Card>
-    )
+const WebinarsPost = ({ WebinarSectionTitle }) => {
+
 
     return (
         <Box component="section">
-            <Typography
+            <WebinarSectionTitle
                 variant="body2"
-                color="secondary"
-                textAlign={{ xs: 'center', md: 'left' }}
                 sx={{
                     margin: {
                         xs: '5rem 0 1.5rem',
@@ -56,7 +17,7 @@ const WebinarsPost = () => {
                     }
                 }}>
                 Join our next Webinar
-            </Typography>
+            </WebinarSectionTitle>
             <Stack
                 direction={{ xs: 'column', md: 'row' }}
                 alignItems={{ xs: 'center', md: 'normal' }}
@@ -78,7 +39,12 @@ const WebinarsPost = () => {
                         Emerging Trends and Technologies
                     </Typography>
                 </Stack>
-                <WebinarVideo />
+                <WebinarCard component='article' >
+                    <WebinarCardMedia component="img" image="images/bull-runing.png" alt="bull runing" />
+                    <WebinarIconButton disableFocusRipple disableRipple color="secondary">
+                        <PlayArrow sx={{ fontSize: 60, color: 'white' }} />
+                    </WebinarIconButton>
+                </WebinarCard>
             </Stack>
         </Box >
     )

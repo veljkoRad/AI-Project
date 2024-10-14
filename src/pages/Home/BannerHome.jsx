@@ -8,7 +8,9 @@ const BannerHome = () => {
                     Empower
                 </Box> Your Trades
             </Typography>
-            <Typography variant="subtitle1" sx={{ textAlign: { xs: 'center', sm: 'left' } }}>AI Strategies for Tomorow's Investors</Typography>
+            <Typography variant="subtitle1" sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
+                AI Strategies for Tomorow's Investors
+            </Typography>
         </>
     )
 }

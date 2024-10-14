@@ -121,6 +121,16 @@ const theme = createTheme({
         }),
       },
     },
+    MuiDrawer:{
+      styleOverrides: {
+        paper :({theme}) => ({
+           backgroundColor: theme.palette.primary.main,
+              display: 'flex', 
+              flexDirection: 'row-reverse', 
+              alignItems: 'flex-start'
+        })
+      }
+    },
     MuiCard: {
       styleOverrides: {
         root:({theme})=> ({

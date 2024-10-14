@@ -61,6 +61,8 @@
 ```
 # Styled Components:
 * This can effectively can help grouping and isolating related styles, avoid inline CSS, and improve reusability.
+* styled component is an high order function- **HOF** because it immediately calls other function.Example:
+ ```styled('div') is HOf and it calls immediately ({display:'flex'})```
 * Two types:
     1. When I don't apply nothing from theme
         ```
@@ -94,19 +96,19 @@
         },
         ```
     4.   To add atributes in styled components,with or without sx
-    ```
-    const MyTextField=styled((props)=>(
-    <TextField
-      variant="outlined"
-      color='secondary'
-      {...props}
-      size='small'
-      placeholder="Search"
-      focused
-      hiddenLabel      
-    /> 
-    ))({})   
-    ```
+        ```
+            const MyTextField=styled((props)=>(
+            <TextField
+            variant="outlined"
+            color='secondary'
+            {...props}
+            size='small'
+            placeholder="Search"
+            focused
+            hiddenLabel      
+            /> 
+            ))({})   
+        ```
 
 # Material UI Component
 [go to top](#index)
