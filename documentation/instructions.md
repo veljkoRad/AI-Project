@@ -43,6 +43,7 @@
     * Defined WebinarVideo Outside JSX
     * Reponsive design
     * Changed all padding values in rem so it would look better because of proportions
+    * First Git Commit
 
     **Plan Za Dalje**:
         * material ui animation: (onHover:Blog Post Card hover, navigation bar buttons and logo)
