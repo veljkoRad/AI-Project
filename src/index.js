@@ -98,6 +98,29 @@ const theme = createTheme({
         }
       }
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          minWidth: '153px',
+          maxWidth: '153px',
+          marginLeft: '12px',
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        input: ({ theme }) => ({
+          height: '21px',
+          padding: '5px 15px',
+          fontSize: '13px',
+          '&::placeholder': {
+            color: theme.palette.secondary.main,  // Ensure theme is accessed correctly
+            fontSize: '13px',
+            fontWeight: 500,
+          },
+        }),
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root:({theme})=> ({

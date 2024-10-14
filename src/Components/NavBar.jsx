@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AppBar, Box, Toolbar, TextField, InputLabel, FilledInput, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import styled from '@emotion/styled';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -9,40 +10,33 @@ const Header = () => {
   const pages = ['Home', 'Blog', 'Webinars'];
 
   // Custom logo component
-  const LogoIcon = () => (
-    <Box component="img" src="/images/AI-Trader-Logo.png" alt="AI Trader Logo" sx={{ width: '140px' }} />
-  );
+  // const LogoIcon=styled(Box)({
+  //   width:'140px'
+  // })
 
-  // Search Input component
-  const SearchInput = () => (
+  const LogoIcon = styled((props) => (
+    // This {...props} ,so that we can add other props as style,sx...
+    <Box 
+    component="img" 
+    {...props} 
+    src="/images/AI-Trader-Logo.png" 
+    alt="AI Trader Logo" />
+  ))({
+    width: '140px',
+  });
+
+
+  const MyTextField=styled((props)=>(
     <TextField
       variant="outlined"
       color='secondary'
+      {...props}
       size='small'
       placeholder="Search"
       focused
-      hiddenLabel
-      sx={{
-        minWidth: '153px',
-        maxWidth: '153px',
-        marginLeft: '12px'
-      }}
-      slotProps={{
-        htmlInput: {
-          sx: {
-            '&::placeholder': {
-              color: 'secondary.main',
-              fontSize: '13px',
-              fontWeight: 500
-            },
-            height: '21px',
-            padding: '5px 15px',
-            fontSize: '13px'
-          },
-        },
-      }}
-    />
-  )
+      hiddenLabel      
+    /> 
+  ))({})
 
   // Toggle state for mobile menu (Drawer)
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -56,7 +50,7 @@ const Header = () => {
 
         {/* Logo with link to home */}
         <IconButton href='http://localhost:3000/'  >
-          <LogoIcon />
+          <LogoIcon  />
         </IconButton>
 
         {/* Menu button for mobile view */}
@@ -74,7 +68,7 @@ const Header = () => {
               </ListItem>
             )
           )}
-          <SearchInput />
+          <MyTextField />  
         </List>
 
 
@@ -100,7 +94,7 @@ const Header = () => {
               </ListItem>)
             )
             }
-            <SearchInput />
+            <MyTextField />             
           </List>
 
         </Drawer>
