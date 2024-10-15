@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Button, Card, Container, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { AiNewsSection, AiNewsSectionTitle, AiNewsCardMedia, AiNewsCardContent, AiNewsCardActions, AiNewsButtonTypography, AiNewsPagination } from "../../styles/HomePageStyled"
 import { Swiper, SwiperSlide } from 'swiper/react';

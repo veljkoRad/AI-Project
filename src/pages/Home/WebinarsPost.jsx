@@ -1,4 +1,5 @@
-import { Stack, Typography, Box, Card, CardMedia, IconButton } from "@mui/material"
+import React from "react"
+import { Stack, Typography, Box} from "@mui/material"
 import { PlayArrow } from "@mui/icons-material"
 import { WebinarCard, WebinarCardMedia, WebinarIconButton } from "../../styles/HomePageStyled"
 
@@ -33,14 +34,16 @@ const WebinarsPost = ({ WebinarSectionTitle }) => {
                         sx={{ maxWidth: '320px' }}
                         textAlign={{ xs: 'center', md: 'left' }} >
                         The Future of
-                        <Typography variant="h2" color="secondary">AI Trading</Typography>
+                        <Box component="div" sx={{color:'secondary.main'}}>AI Trading</Box>
                     </Typography>
                     <Typography variant="subtitle1" display={{ xs: 'none', md: 'block' }}>
                         Emerging Trends and Technologies
                     </Typography>
                 </Stack>
-                <WebinarCard component='article' >
-                    <WebinarCardMedia component="img" image="images/bull-runing.png" alt="bull runing" />
+                <WebinarCard >
+                    <WebinarCardMedia 
+// @ts-ignore
+                    component="img" src="images/bull-runing.png" title="bull runing"/>
                     <WebinarIconButton disableFocusRipple disableRipple color="secondary">
                         <PlayArrow sx={{ fontSize: 60, color: 'white' }} />
                     </WebinarIconButton>

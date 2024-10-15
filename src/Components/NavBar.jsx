@@ -1,6 +1,7 @@
+import React from 'react';
 import { useState } from 'react';
 import { AppBar, Box, Toolbar, TextField, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
-import styled from '@emotion/styled';
+import {styled} from "@mui/material/styles"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -46,8 +47,6 @@ const Header = () => {
       {...props}
       size='small'
       placeholder="Search"
-      focused
-      hiddenLabel
     />
   ))({ whiteSpace: 'nowrap', fontSize: '13px' })
 
@@ -72,6 +71,8 @@ const Header = () => {
         </IconButton>
 
         {/* Navigation  for desktop  */}
+        
+
         <List direction="row" spacing={2} sx={{ display: { xs: 'none', sm: 'flex' } }}>
           {pages.map(
             (page, index) => (
@@ -82,6 +83,7 @@ const Header = () => {
             )
           )}
           <MyTextField />
+
         </List>
 
         {/* Drawer for mobile */}

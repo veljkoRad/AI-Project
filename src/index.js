@@ -4,22 +4,20 @@ import './index.css';
 import App from './App';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import { Padding } from '@mui/icons-material';
 
 
 const theme = createTheme({
   palette: {
-    background: { default: '#010A0A' },
-    text: {
-      primary: "#fff",
-    },
     primary: {
       main: "#010A0A",
       dark: "#071212"
     },
     secondary: {
-      main: "#00FBF4",
-  
+      main: "#00FBF4",  
+    },
+    background: { default: '#010A0A' },
+    text: {
+      primary: "#fff",
     }
   },
   typography: {
@@ -66,15 +64,11 @@ const theme = createTheme({
     subtitle2: {
       fontSize: '14px',
       fontWeight: 400
-    },
-    string: {
-      fontSize: '12px'
     }
   },
   breakpoints: {
     values: {
       xs: 0,
-      mobile: 360,
       sm: 767,
       md: 991,
       lg: 1280,
@@ -142,6 +136,7 @@ const theme = createTheme({
     },
   },
 });
+// @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={theme}>

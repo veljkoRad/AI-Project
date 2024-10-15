@@ -1,5 +1,6 @@
-import styled from "@emotion/styled"
+import {styled} from "@mui/material/styles"
 import { Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton } from "@mui/material"
+
 
 
 // AiNews.jsx Start
