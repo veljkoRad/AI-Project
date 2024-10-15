@@ -1,10 +1,10 @@
-import {styled} from "@mui/material/styles"
+import { styled } from "@mui/material/styles"
 import { Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton } from "@mui/material"
 
 
 
 // AiNews.jsx Start
-export const AiNewsSection = styled(Box)(({ theme }) => ({
+export const NewsSection = styled(Box)(({ theme }) => ({
     padding: '5rem 0',
     background: 'url("images/ai-news-background.png")',
     backgroundSize: '1100px 633px',
@@ -13,7 +13,7 @@ export const AiNewsSection = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.primary.dark
 }))
 
-export const AiNewsSectionTitle = styled(Typography)(({ theme }) => ({
+export const NewsSectionTitle = styled(Typography)(({ theme }) => ({
     color: theme.palette.secondary.main,
     textAlign: 'left',
     // when I want to use the dynamic expressions as a key, I need to wrap it in square brackets [].down() is a method
@@ -46,10 +46,11 @@ export const AiNewsPagination = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
     position: 'absolute',
-    bottom: '-1% !important',
+    bottom: '-5% !important',
     left: '50% !important',
     transform: 'translateX(-50%)',
     zIndex: 999,
+    // @ts-ignore
     display: 'none',
     [theme.breakpoints.down('md')]: {
         display: 'flex'

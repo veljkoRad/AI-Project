@@ -19,6 +19,10 @@ const Header = () => {
       alt="AI Trader Logo" />
   ))({
     width: '140px',
+    transition: 'transform 0.2s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.03)',
+    },
   });
 
   const MyTextField = styled((props) => (
@@ -33,12 +37,16 @@ const Header = () => {
     />
   ))({})
 
-  const MyListItem = styled(ListItem)(({ theme }) => ({
+  const NavBarListItem = styled(ListItem)(({ theme }) => ({
     cursor: 'pointer',
     padding: '0 12px',
     [theme.breakpoints.down('md')]: {
       padding: '8px 12px'
-    }
+    },
+    transition: 'transform 0.2s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.1)',
+    },
   }))
 
   const MyListItemText = styled((props) => (
@@ -70,16 +78,15 @@ const Header = () => {
           <MenuIcon color='secondary' fontSize='medium' />
         </IconButton>
 
-        {/* Navigation  for desktop  */}
-        
+        {/* Navigation  for desktop  */}        
 
-        <List direction="row" spacing={2} sx={{ display: { xs: 'none', sm: 'flex' } }}>
+        <List component="nav"  sx={{ display: { xs: 'none', sm: 'flex' } }}>
           {pages.map(
             (page, index) => (
-              <MyListItem key={index} >
+              <NavBarListItem key={index} >
                 {/* disableTypography- if I want to apply fontWeight here I must disable child element */}
                 <MyListItemText primary={page} />
-              </MyListItem>
+              </NavBarListItem>
             )
           )}
           <MyTextField />
@@ -91,12 +98,12 @@ const Header = () => {
           <IconButton onClick={toggleNavMenu} sx={{ padding: '1rem' }}>
             <CloseIcon color='secondary' fontSize='medium' />
           </IconButton>
-          <List sx={{ marginLeft: 'auto' }}>
+          <List component="nav" sx={{ marginLeft: 'auto' }}>
             {pages.map((page, index) =>
             (
-              <MyListItem key={index} onClick={toggleNavMenu} >
+              <NavBarListItem key={index} onClick={toggleNavMenu} >
                 <MyListItemText primary={page} />
-              </MyListItem>
+              </NavBarListItem>
             ))}
             <MyTextField />
           </List>

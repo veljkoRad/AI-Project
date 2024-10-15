@@ -1,19 +1,25 @@
 import React from "react";
 import { Button, Card, Container, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { AiNewsSection, AiNewsSectionTitle, AiNewsCardMedia, AiNewsCardContent, AiNewsCardActions, AiNewsButtonTypography, AiNewsPagination } from "../../styles/HomePageStyled"
+import { NewsSectionTitle, AiNewsCardMedia, AiNewsCardContent, AiNewsCardActions, AiNewsButtonTypography, AiNewsPagination } from "../../styles/HomePageStyled"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper/modules";
 import 'swiper/css/bundle'; //for Styling Pagination dots
 import singlePostData from "../../data/singlePostData";
-import WebinarsPost from "./WebinarsPost";
 
 const AiNews = () => {
     const theme = useTheme();
     //useMediaQuery is React hook from materialUI.Down is max width that size and up is min width
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
     // AiPosts Component, I did like this instead of defining and mapping Card two times
     const AiPosts = singlePostData.map((post, index) => (
-        <Card key={index} variant="outlined">
+        <Card key={index} variant="outlined" sx={{
+            transition: 'transform 0.2s ease-in-out',
+            '&:hover': {
+                // I dont need hover for mobile
+                transform: { xs: 'none', md: 'scale(1.03)' }
+            },
+        }}>
             <AiNewsCardMedia
                 image={post.image}
                 title={post.title}
@@ -30,59 +36,56 @@ const AiNews = () => {
     ))
 
     return (
-        <AiNewsSection >
-            <Container maxWidth="md">
-                <AiNewsSectionTitle variant="body2" >
-                    AI News
-                </AiNewsSectionTitle>
 
-                {isMobile ? (
-                    <Swiper
-                        spaceBetween={10}
-                        breakpoints={{
-                            0: { slidesPerView: 1 },
-                            800: { slidesPerView: 2 }
-                        }}
-                        modules={[Pagination]}
-                        pagination={{
-                            clickable: true,
-                            //With this 'el' class I can add div outside container and  it will load dots in that div.
-                            //Why outside cointainer?
-                            //Because when I set to dots bottom:-200px They are hidden.
-                            el: '.custom-pagination',
-                        }}
-                        loop={true}
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            position: 'relative'
-                        }}
-                    >
-                        {singlePostData.map((post, index) => (
-                            <SwiperSlide
-                                key={index}
-                                style={{
-                                    display: 'flex',
-                                    justifyContent: 'center'
-                                }}
-                            >
-                                {/* for example AiPosts[0] is first card. */}
-                                {AiPosts[index]}
+        <Container maxWidth="md" sx={{ position: 'relative' }}>
+            <NewsSectionTitle variant="body2" >
+                AI News
+            </NewsSectionTitle>
 
-                            </SwiperSlide>
-                        ))}
+            {isMobile ? (
+                <Swiper
+                    spaceBetween={10}
+                    breakpoints={{
+                        0: { slidesPerView: 1 },
+                        800: { slidesPerView: 2 }
+                    }}
+                    modules={[Pagination]}
+                    pagination={{
+                        clickable: true,
+                        //With this 'el' class I can add div outside container and  it will load dots in that div.
+                        //Why outside cointainer?
+                        //Because when I set to dots bottom:-200px They are hidden.
+                        el: '.custom-pagination',
+                    }}
+                    loop={true}
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        position: 'relative'
+                    }}
+                >
+                    {singlePostData.map((post, index) => (
+                        <SwiperSlide
+                            key={index}
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'center'
+                            }}
+                        >
+                            {/* for example AiPosts[0] is first card. */}
+                            {AiPosts[index]}
 
-                    </Swiper>
-                ) : (
-                    <Stack direction="row" spacing={2} sx={{ justifyContent: 'space-between' }}>
-                        {AiPosts}
-                    </Stack>
-                )}
-                <AiNewsPagination className="custom-pagination" />
+                        </SwiperSlide>
+                    ))}
 
-                <WebinarsPost WebinarSectionTitle={AiNewsSectionTitle} />
-            </Container>
-        </AiNewsSection>
+                </Swiper>
+            ) : (
+                <Stack direction="row" spacing={2} sx={{ justifyContent: 'space-between' }}>
+                    {AiPosts}
+                </Stack>
+            )}
+            <AiNewsPagination className="custom-pagination" />
+        </Container>
     );
 };
 

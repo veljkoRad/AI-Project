@@ -5,6 +5,8 @@
     --swiper-pagination-bullet-inactive-opacity: 0.5; /* Inactive dot opacity */
 }
 
+
+
 .swiper-pagination-bullet-active {
     --swiper-pagination-color: #00FBF4; 
 }

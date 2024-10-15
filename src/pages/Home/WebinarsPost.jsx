@@ -1,15 +1,15 @@
 import React from "react"
-import { Stack, Typography, Box} from "@mui/material"
+import { Stack, Typography, Box, Container } from "@mui/material"
 import { PlayArrow } from "@mui/icons-material"
-import { WebinarCard, WebinarCardMedia, WebinarIconButton } from "../../styles/HomePageStyled"
+import { WebinarCard, WebinarCardMedia, WebinarIconButton, NewsSectionTitle } from "../../styles/HomePageStyled"
 
 
-const WebinarsPost = ({ WebinarSectionTitle }) => {
+const WebinarsPost = () => {
 
 
     return (
-        <Box component="section">
-            <WebinarSectionTitle
+        <Container maxWidth="md">
+            <NewsSectionTitle
                 variant="body2"
                 sx={{
                     margin: {
@@ -18,7 +18,7 @@ const WebinarsPost = ({ WebinarSectionTitle }) => {
                     }
                 }}>
                 Join our next Webinar
-            </WebinarSectionTitle>
+            </NewsSectionTitle>
             <Stack
                 direction={{ xs: 'column', md: 'row' }}
                 alignItems={{ xs: 'center', md: 'normal' }}
@@ -34,22 +34,22 @@ const WebinarsPost = ({ WebinarSectionTitle }) => {
                         sx={{ maxWidth: '320px' }}
                         textAlign={{ xs: 'center', md: 'left' }} >
                         The Future of
-                        <Box component="div" sx={{color:'secondary.main'}}>AI Trading</Box>
+                        <Box component="div" sx={{ color: 'secondary.main' }}>AI Trading</Box>
                     </Typography>
                     <Typography variant="subtitle1" display={{ xs: 'none', md: 'block' }}>
                         Emerging Trends and Technologies
                     </Typography>
                 </Stack>
                 <WebinarCard >
-                    <WebinarCardMedia 
-// @ts-ignore
-                    component="img" src="images/bull-runing.png" title="bull runing"/>
+                    <WebinarCardMedia
+                        // @ts-ignore
+                        component="img" src="images/bull-runing.png" title="bull runing" />
                     <WebinarIconButton disableFocusRipple disableRipple color="secondary">
                         <PlayArrow sx={{ fontSize: 60, color: 'white' }} />
                     </WebinarIconButton>
                 </WebinarCard>
             </Stack>
-        </Box >
+        </Container>
     )
 }
 

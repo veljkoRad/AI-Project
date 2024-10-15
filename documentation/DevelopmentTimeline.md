@@ -78,10 +78,16 @@
     * Moved all styled components to ```HomePageStyled.jsx```
     * In AiNews.jsx changed code so that I define Card component only once for mobile and desktop
     * Updated ```README.md``` with more detailed process
-
-
-
-
-  ## **Coding plan**:
-  * Ask chatgpt is my comments good for easier reading code and what can I improve here?
-  * material ui animation: (onHover:Blog Post Card hover, navigation bar buttons and logo)
+### 15.10.2024.
+* **Fixing Errors**
+  * In console I got some errors like 
+    * h2 cannot be child of parent h2
+    * removed atributes from card that are not exist (focused)
+  * In VS code I removed some problems like:
+    * instead of styled from @emotion I used styled from matetial/styles
+* **Animation**
+  * Added scale on hover for:LogoIcon, NavBarListItem, AiNews Single post
+* **Fixed NewsSection**
+  * Added in home.js Container section from MaterialUI  so that I can put AiNews and Webinars in separate sections.
+  * With this I fixed problem with position of AiNewsPagination.
+  * Also better code structure to put this two in separate components 

@@ -6,8 +6,6 @@ import { Box } from "@mui/material"
 
 const Banner = ({ children }) => {
 
-
-
     // Banner Background Component
     const BannerBg = styled(Box)({
         backgroundImage: "url('/images/arms-background.png')",
@@ -19,7 +17,7 @@ const Banner = ({ children }) => {
         justifyContent: 'center',
         padding: '1rem'
     })
-
+    
     //Banner Container Component
     const BannerContainer = styled(Box)({
         display: 'flex',
@@ -28,10 +26,10 @@ const Banner = ({ children }) => {
         maxWidth: '734px'
     })
 
-
     return (
-        <BannerBg component='main'>
-            <BannerContainer component='div'>
+        // because BannerBg and BannerContainer are styled components I cannot use atribute like in box "component" that's why I use "as"
+        <BannerBg as='main'>
+            <BannerContainer as='div'>
                 {children}
             </BannerContainer>
         </BannerBg>
