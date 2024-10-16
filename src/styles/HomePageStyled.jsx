@@ -46,7 +46,7 @@ export const BlogPagination = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
     position: 'absolute',
-    bottom: '-5% !important',
+    bottom: '-7% !important',
     left: '50% !important',
     transform: 'translateX(-50%)',
     zIndex: 999,

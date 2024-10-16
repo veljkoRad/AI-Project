@@ -1,12 +1,11 @@
-<style>h2 {color:#6BBF59;} strong {color:#ff1d58;} html { scroll-behavior: smooth;} </style>
+<style>h3 {color:#6BBF59;} strong {color:#ff1d58;} html { scroll-behavior: smooth;} </style>
 
-## Development Timeline
+# Development Timeline
 
-### 1. Initial Setup
 
 #### 07.10.2024
-
-* Created the project using `create-react-app`.
+* **Initial Setup**
+  * Created the project using `create-react-app`.
   * Deleted files that I don't need right now ( reportWebVitals.js,app.css, App.test.js, setupTest.js, reactIcon... )
 * **MaterialUI** -Installed in react so I can start styling.
   * Aded default properties(colors, font)
@@ -20,8 +19,6 @@
   * Added responsive sx styling
   * Added Drawer so that I have responsive menu with toggle button
   * Added TextField
-
-### 2. Home page
 
 #### 09.10.2024
 
@@ -98,3 +95,20 @@
 * **TradingNews.jsx**
   * Creating component so that I can use same component as AiNews.jsx inside of it
   * Renamed all components that has AINews in to Blog(BlogCardAction...)
+* **BlogNewsAI**
+  * Created separate component which I use in both **AiNews.jsx** and **TradingNews.jsx**
+  * In this component I only hold card components,without container.
+  * map(newsData) must be inside of main element(<></>) in component,instead of array!
+  *  This Component wil take two props.Thesewo props are things that canot be duplicated:
+    * paginationClass- id doesn't work if copied with same name
+    * newsData -AiNewsData and TrendingNewsData has different values.
+* **AiNews** and **TradingNews**
+  * Within them I define these two different props
+  * I also set container for each,I need this component to be separate because they have different content(TradingNews has h2 )
+
+* **TO DO**
+  * In README.md write whole code what you have learned using same technique as for
+      ```
+      * React
+        * Using same component twice or more, but with different props(AiNews, TradingNews)
+      ```

@@ -11,6 +11,7 @@
 
 ## Lessons Learned (Topics that you can find in this project)
 * React
+    *Using same component twice or more, but with different props(AiNews, TradingNews)
 * npm and npx via Node.js
 * MaterialUI 
     * Using some of  MaterialUI components 
