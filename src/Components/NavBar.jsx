@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { AppBar, Box, Toolbar, TextField, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
-import {styled} from "@mui/material/styles"
+import { LogoIcon } from "../styles/PageStyled"
+import { styled } from "@mui/material/styles"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -9,21 +10,6 @@ const Header = () => {
 
   // Define the pages list
   const pages = ['Home', 'Blog', 'Webinars'];
-
-  const LogoIcon = styled((props) => (
-    // This {...props} ,so that we can add other props as style,sx...
-    <Box
-      component="img"
-      {...props}
-      src="/images/AI-Trader-Logo.png"
-      alt="AI Trader Logo" />
-  ))({
-    width: '140px',
-    transition: 'transform 0.2s ease-in-out',
-    '&:hover': {
-      transform: 'scale(1.03)',
-    },
-  });
 
   const MyTextField = styled((props) => (
     <TextField
@@ -78,9 +64,9 @@ const Header = () => {
           <MenuIcon color='secondary' fontSize='medium' />
         </IconButton>
 
-        {/* Navigation  for desktop  */}        
+        {/* Navigation  for desktop  */}
 
-        <List component="nav"  sx={{ display: { xs: 'none', sm: 'flex' } }}>
+        <List component="nav" sx={{ display: { xs: 'none', sm: 'flex' } }}>
           {pages.map(
             (page, index) => (
               <NavBarListItem key={index} >

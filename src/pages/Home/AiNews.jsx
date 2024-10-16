@@ -1,39 +1,18 @@
 import React from "react";
-import { Button, Card, Container, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { NewsSectionTitle, AiNewsCardMedia, AiNewsCardContent, AiNewsCardActions, AiNewsButtonTypography, AiNewsPagination } from "../../styles/HomePageStyled"
+import { Container, Stack, useMediaQuery, useTheme } from "@mui/material";
+import { NewsSectionTitle, BlogPagination } from "../../styles/HomePageStyled"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper/modules";
 import 'swiper/css/bundle'; //for Styling Pagination dots
-import singlePostData from "../../data/singlePostData";
+import SinglePost from "../../data/SinglePost";
 
 const AiNews = () => {
     const theme = useTheme();
     //useMediaQuery is React hook from materialUI.Down is max width that size and up is min width
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-    // AiPosts Component, I did like this instead of defining and mapping Card two times
-    const AiPosts = singlePostData.map((post, index) => (
-        <Card key={index} variant="outlined" sx={{
-            transition: 'transform 0.2s ease-in-out',
-            '&:hover': {
-                // I dont need hover for mobile
-                transform: { xs: 'none', md: 'scale(1.03)' }
-            },
-        }}>
-            <AiNewsCardMedia
-                image={post.image}
-                title={post.title}
-            />
-            <AiNewsCardContent >
-                <Typography variant="subtitle1" >{post.content}</Typography>
-            </AiNewsCardContent>
-            <AiNewsCardActions >
-                <Button size="medium" color="secondary" variant="outlined">
-                    <AiNewsButtonTypography variant="button" color="secondary" >Read More</AiNewsButtonTypography>
-                </Button>
-            </AiNewsCardActions>
-        </Card>
-    ))
+    // SinglePost Component, I did like this instead of defining and mapping Card two times
+
 
     return (
 
@@ -64,7 +43,7 @@ const AiNews = () => {
                         position: 'relative'
                     }}
                 >
-                    {singlePostData.map((post, index) => (
+                    {singlePost.map((post, index) => (
                         <SwiperSlide
                             key={index}
                             style={{
@@ -72,8 +51,8 @@ const AiNews = () => {
                                 justifyContent: 'center'
                             }}
                         >
-                            {/* for example AiPosts[0] is first card. */}
-                            {AiPosts[index]}
+                            {/* for example SinglePost[0] is first card. */}
+                            {SinglePost[index]}
 
                         </SwiperSlide>
                     ))}
@@ -81,10 +60,10 @@ const AiNews = () => {
                 </Swiper>
             ) : (
                 <Stack direction="row" spacing={2} sx={{ justifyContent: 'space-between' }}>
-                    {AiPosts}
+                    {SinglePost}
                 </Stack>
             )}
-            <AiNewsPagination className="custom-pagination" />
+            <BlogPagination className="custom-pagination" />
         </Container>
     );
 };

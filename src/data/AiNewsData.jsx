@@ -1,4 +1,4 @@
-const singlePostData = [
+const AiNewsData = [
     {
         image: '/images/blog1.png',
         content: 'Benefits of using AI technologies in different industries.',
@@ -19,4 +19,4 @@ const singlePostData = [
     }
 ]
 
-export default singlePostData;
+export default AiNewsData;

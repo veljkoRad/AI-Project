@@ -91,3 +91,10 @@
   * Added in home.js Container section from MaterialUI  so that I can put AiNews and Webinars in separate sections.
   * With this I fixed problem with position of AiNewsPagination.
   * Also better code structure to put this two in separate components 
+### 16.10.2024.
+* **Footer.jsx**
+    * Added footer
+    * added **PagedStyled.jsx** so I can add styles for components that repeats(LogoIcon in navbar and footer)
+* **TradingNews.jsx**
+  * Creating component so that I can use same component as AiNews.jsx inside of it
+  * Renamed all components that has AINews in to Blog(BlogCardAction...)

@@ -10,7 +10,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#010A0A",
-      dark: "#071212"
+      light: "#012423"
     },
     secondary: {
       main: "#00FBF4",  
@@ -62,7 +62,7 @@ const theme = createTheme({
       '@media (max-width:991px)': { fontSize: '12px' }
     },
     subtitle2: {
-      fontSize: '14px',
+      fontSize: '11px',
       fontWeight: 400
     }
   },

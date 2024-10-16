@@ -10,7 +10,7 @@ export const NewsSection = styled(Box)(({ theme }) => ({
     backgroundSize: '1100px 633px',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'left',
-    backgroundColor: theme.palette.primary.dark
+    backgroundColor: theme.palette.primary.light
 }))
 
 export const NewsSectionTitle = styled(Typography)(({ theme }) => ({
@@ -23,26 +23,26 @@ export const NewsSectionTitle = styled(Typography)(({ theme }) => ({
     marginBottom: '1.5rem'
 }))
 
-export const AiNewsCardMedia = styled(CardMedia)({
+export const BlogCardMedia = styled(CardMedia)({
     height: '183px'
 })
 
-export const AiNewsCardContent = styled(CardContent)(({ theme }) => ({
+export const BlogCardContent = styled(CardContent)(({ theme }) => ({
     minHeight: '116px',
     [theme.breakpoints.down('md')]: {
         minHeight: '64px'
     }
 }))
 
-export const AiNewsCardActions = styled(CardActions)({
+export const BlogCardActions = styled(CardActions)({
     padding: '8px 16px 16px'
 })
 
-export const AiNewsButtonTypography = styled(Typography)({
+export const BlogButtonTypography = styled(Typography)({
     textTransform: 'capitalize'
 })
 
-export const AiNewsPagination = styled('div')(({ theme }) => ({
+export const BlogPagination = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
     position: 'absolute',
@@ -64,7 +64,7 @@ export const WebinarCard = styled(Card)(({ theme }) => ({
     border: 'none',
     maxWidth: '100%',
     flexGrow: 2,
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: theme.palette.primary.light,
     display: 'flex',
     justifyContent: 'space-around',
     position: 'relative',
