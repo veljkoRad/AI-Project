@@ -11,7 +11,7 @@ const Header = () => {
   // Define the pages list
   const pages = ['Home', 'Blog', 'Webinars'];
 
-  const MyTextField = styled((props) => (
+  const NavTextField = styled((props) => (
     <TextField
       variant="outlined"
       color='secondary'
@@ -25,9 +25,9 @@ const Header = () => {
 
   const NavBarListItem = styled(ListItem)(({ theme }) => ({
     cursor: 'pointer',
-    padding: '0 12px',
+    padding: `0 ${theme.spacing(3)}`,
     [theme.breakpoints.down('md')]: {
-      padding: '8px 12px'
+      padding: `${theme.spacing(2)} ${theme.spacing(3)}`
     },
     transition: 'transform 0.2s ease-in-out',
     '&:hover': {
@@ -75,13 +75,13 @@ const Header = () => {
               </NavBarListItem>
             )
           )}
-          <MyTextField />
+          <NavTextField />
 
         </List>
 
         {/* Drawer for mobile */}
         <Drawer anchor="top" open={toggleMenu} onClose={toggleNavMenu} >
-          <IconButton onClick={toggleNavMenu} sx={{ padding: '1rem' }}>
+          <IconButton onClick={toggleNavMenu} sx={{ padding: 4 }}>
             <CloseIcon color='secondary' fontSize='medium' />
           </IconButton>
           <List component="nav" sx={{ marginLeft: 'auto' }}>
@@ -91,7 +91,7 @@ const Header = () => {
                 <MyListItemText primary={page} />
               </NavBarListItem>
             ))}
-            <MyTextField />
+            <NavTextField />
           </List>
         </Drawer>
       </Toolbar>

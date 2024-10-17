@@ -97,7 +97,7 @@
         ```
     4.   To add atributes in styled components,with or without sx
         ```
-            const MyTextField=styled((props)=>(
+            const NavTextField=styled((props)=>(
             <TextField
             variant="outlined"
             color='secondary'

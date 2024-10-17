@@ -5,7 +5,7 @@ import { Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton 
 
 // AiNews.jsx Start
 export const NewsSection = styled(Box)(({ theme }) => ({
-    padding: '5rem 0',
+    padding: `${theme.spacing(20)} 0`,
     background: 'url("images/ai-news-background.png")',
     backgroundSize: '1100px 633px',
     backgroundRepeat: 'no-repeat',
@@ -20,7 +20,7 @@ export const NewsSectionTitle = styled(Typography)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
         textAlign: 'center',
     },
-    marginBottom: '1.5rem'
+    marginBottom: theme.spacing(6)
 }))
 
 export const BlogCardMedia = styled(CardMedia)({

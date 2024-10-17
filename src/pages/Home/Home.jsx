@@ -5,6 +5,7 @@ import BannerHome from "./BannerHome"
 import BlogNews from "./BlogNews"
 import WebinarsPost from "./WebinarsPost"
 import TradingNews from "./TradingNews"
+import Fortrade from "./Fortrade"
 import Footer from "../../Components/Footer"
 // Styles
 import { NewsSection } from "../../styles/HomePageStyled"
@@ -22,6 +23,7 @@ const Home = () => {
                 <AiNews />
                 <WebinarsPost />
             </NewsSection>
+            <Fortrade />
             <TradingNews />
             <Footer />
         </>

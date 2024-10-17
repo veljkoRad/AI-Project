@@ -8,7 +8,7 @@ const Footer = () => {
 
     const FooterBackground = styled(Box)(({ theme }) => ({
         padding: '34px 0',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.primary.light,
         backgroundImage: "url('images/footerBG.png')",
         backgroundSize: '694px 150px',
         backgroundRepeat: 'no-repeat',

@@ -7,6 +7,7 @@ import { CssBaseline } from '@mui/material';
 
 
 const theme = createTheme({
+  spacing:4,
   palette: {
     primary: {
       main: "#010A0A",
@@ -14,6 +15,9 @@ const theme = createTheme({
     },
     secondary: {
       main: "#00FBF4",  
+    },
+    info:{
+      main:'#dadada'
     },
     background: { default: '#010A0A' },
     text: {
@@ -40,6 +44,7 @@ const theme = createTheme({
     h3: {
       fontSize: '32px',
       fontWeight: 700,
+      '@media (max-width:991px)' :{fontSize:'24px'},
     },
     h4: {
       fontSize: '28px',
@@ -62,7 +67,7 @@ const theme = createTheme({
       '@media (max-width:991px)': { fontSize: '12px' }
     },
     subtitle2: {
-      fontSize: '11px',
+      fontSize: '12px',
       fontWeight: 400
     }
   },

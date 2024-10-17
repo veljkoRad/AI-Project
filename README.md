@@ -11,10 +11,12 @@
 
 ## Lessons Learned (Topics that you can find in this project)
 * React
+    * components, child components, export, props
     *Using same component twice or more, but with different props(AiNews, TradingNews)
 * npm and npx via Node.js
-* MaterialUI 
-    * Using some of  MaterialUI components 
+* MaterialUI
+    * Install : ```theme=createTheme``` => ```<ThemeProvider><App>``` => ```<CssBaseline>```
+    * Using MaterialUI components 
     * Defining custom copmonents styles using styled components ,
     * Defining default values using **createTheme**
 * Creating Carousel for tablet/mobile version using **SwiperJS**

@@ -10,19 +10,19 @@
 * **MaterialUI** -Installed in react so I can start styling.
   * Aded default properties(colors, font)
   * I have document react.md with full instructions
-* Created **header.jsx**
+* Created **NavBar.jsx**
   * Added MaterialUI components (AppBar Toolbar...)
   * Used createTheme to change styles of that components
   * Added inline sx to edit styles
   * First Implemetation of `map()` for my header pages
     #### 08.10.2024
   * Added responsive sx styling
-  * Added Drawer so that I have responsive menu with toggle button
+  * Added *```<Drawer />``` so that I have responsive menu with toggle button
   * Added TextField
 
 #### 09.10.2024
 
-* Redesign of Header based by appleAI-Blog
+* Redesign of Header based by website appleAI-Blog
 * Created folder structure: **documentation**, **home**, **components**.
 * Created `Home.js` and `Banner.js`
 * **Banner.jsx**
@@ -39,10 +39,10 @@
     * Added Card, CardMedia, CardActions , to define my Blog post
     * Defined Card style in createTheme
     * Displayed 3 cards using map()
-    * moved singlePostData to data folder as single file for better structure.
+    * moved ```singlePostData``` to **data** folder as single file for better structure.
     * Instaled Swiper for mobile/tablet responsive.
-    * Added Carousel and pagination dots ,Explanation in SwiperJS.md.
-    *Changed names of styled components to be realted to component that are located in.
+    * Added Carousel and pagination dots ,Explanation in **SwiperJS.md**.
+    * Changed names of styled components to be related to component that are located in.
 
 ### 11.10.2024
 
@@ -106,9 +106,19 @@
   * Within them I define these two different props
   * I also set container for each,I need this component to be separate because they have different content(TradingNews has h2 )
 
+* **spacing** 
+  * Definition
+    * ```useTheme{ spacing:4}```
+  * Implemetation
+    * ```sx={{padding :4}}``` -16px
+    * ```styled()({padding:theme.spacing(4)})```
+    * changed all neccesary  padding and margins 
+* **Fortrade.jsx**
+
 * **TO DO**
-  * In README.md write whole code what you have learned using same technique as for
+  * In README.md write whole code what you have learned using same technique as for, check with chatgpt about whole documentation
       ```
       * React
         * Using same component twice or more, but with different props(AiNews, TradingNews)
       ```
+  

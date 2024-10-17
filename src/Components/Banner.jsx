@@ -1,5 +1,5 @@
 import React from "react"
-import {styled} from "@mui/material/styles"
+import { styled } from "@mui/material/styles"
 import { Box } from "@mui/material"
 
 
@@ -17,7 +17,7 @@ const Banner = ({ children }) => {
         justifyContent: 'center',
         padding: '1rem'
     })
-    
+
     //Banner Container Component
     const BannerContainer = styled(Box)({
         display: 'flex',
