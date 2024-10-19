@@ -1,3 +1,20 @@
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #010A0A; /* Background of the scrollbar track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0,251,244, 0.7); /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0,251,244, 0.5) /* Color of the scrollbar handle on hover */
+  }
+
 .swiper-pagination-bullet {
     --swiper-pagination-top: 10px;
     --swiper-pagination-bullet-size: 12px; /* Adjust size of the dots */

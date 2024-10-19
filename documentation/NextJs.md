@@ -29,13 +29,13 @@
     * Server Load- More (server fetches data each time)
     * Content Updates- Immediately via API fetch
 
+* **SSR** When user enters site: JavaScript is executed on the server before sending rendered HTML, leading to a faster initial display of content.
 
 * Good for  content rich apps where SEO is important.
 * WHen page loads first then we use SSG and SSR,after when we change routes pages doesn't refresh because of React using CSR
 
-    * **SSR** When user enters site: JavaScript is executed on the server before sending rendered HTML, leading to a faster initial display of content.
-    * **CSR**(client side rendering) there is much slower CSR(client side rendering) for first load. Server sends mninimal HTML than executing JS code , than render that in Browser.This is slower method
-    * **SSG**  HTML is pre-built at build time and served as static files.
+    
+
 
 ## 3. API Routes
 * I use it to hadle requests and manage data.
