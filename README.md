@@ -10,15 +10,41 @@
 
 
 ## Lessons Learned (Topics that you can find in this project)
-* React
-    * components, child components, export, props
-    *Using same component twice or more, but with different props(AiNews, TradingNews)
-* npm and npx via Node.js
-* MaterialUI
-    * Install : ```theme=createTheme``` => ```<ThemeProvider><App>``` => ```<CssBaseline>```
-    * Using MaterialUI components 
-    * Defining custom copmonents styles using styled components ,
-    * Defining default values using **createTheme**
-* Creating Carousel for tablet/mobile version using **SwiperJS**
-* Folder structure (write about techniques that I used)
-* Writing code structure(write about techniques that I used)
+
+### 1. Project Setup and Structure
+
+* Familiarity with setting up a React project using create-react-app.
+* Importance of maintaining an organized folder structure (e.g., separating components, documentation, and data).
+
+### 2.. Styling with Material-UI
+* Installation and utilization of Material-UI for styling components.
+* Implementation of createTheme to manage global styles such as colors and fonts.
+* Application of responsive styling using the sx prop and Material-UI's Grid system.
+
+### 3. Component Development
+* Creation of reusable components (e.g., NavBar, Banner, AiNews, WebinarsPost) for modular development.
+* Understanding of props and their use in passing data to child components, enhancing component reusability.
+
+### 4. Responsive Design
+* Implementation of responsive layouts using Material-UI's Drawer for mobile navigation and Swiper for carousels.
+
+### 5. State Management
+* Utilization of map() for dynamically rendering lists of components, improving data management and presentation.
+
+### 6. Styled Components
+* Integration of styled-components to create reusable styled elements and manage styles more efficiently.
+
+### 7. Error Handling and Debugging
+* Troubleshooting common React errors (e.g., incorrect nesting of HTML elements) and correcting issues in component structures.
+
+### 8. Animation Techniques
+* Implementation of hover animations for interactive elements, enhancing user experience.
+
+### 9. Version Control with Git
+* Familiarity with Git for version control, including local and remote repository management.
+
+### 10. Documentation Practices
+* Importance of maintaining thorough documentation (e.g., React.md, GitHubInstructions.md, NextJS.md) to track project development and provide guidance.
+
+### 11. Introduction to Next.js
+* Initial exploration of Next.js for routing, indicating a move towards a more structured approach to building applications with server-side rendering capabilities.

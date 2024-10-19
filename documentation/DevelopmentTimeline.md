@@ -114,8 +114,14 @@
     * ```styled()({padding:theme.spacing(4)})```
     * changed all neccesary  padding and margins 
 * **Fortrade.jsx**
+### 19.10.2024.
+  * **Next.js**
+    *Impoting it for routing, at first
+    * Learning and Writing a file **NextJS.md**.
+    
 
 * **TO DO**
+Stil trying to figure out SSG,SSR,CSR
   * In README.md write whole code what you have learned using same technique as for, check with chatgpt about whole documentation
       ```
       * React
