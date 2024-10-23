@@ -121,7 +121,7 @@
     
 
 * **TO DO**
-Stil trying to figure out SSG,SSR,CSR
+  * Mock API for database?
   * In README.md write whole code what you have learned using same technique as for, check with chatgpt about whole documentation
       ```
       * React

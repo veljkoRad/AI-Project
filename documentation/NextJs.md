@@ -17,24 +17,21 @@
     * HTML is generated once at build time and doesn't change unless the site is rebuilt.
     * Initial Load- Fast(pre-built HTML)
     * SEO-Better (HTML ready for search engines)
-    * Server Load- Light (HTML already generated)
-    * Content Updates- Requires rebuild
 
 ### Dynamic
 
 * **Client Side Rendering**
-    * Loads empty html('root') then built app in browser using predefined javascript(index.js) 
-    * Initial Load- Slower(HTML built in browser)
-    * SEO- Weaker(content loaded dynamically)
-    * Server Load- More (server fetches data each time)
-    * Content Updates- Immediately via API fetch
+    * From server loads basic HTML (root div) and javascript
+    * Renders page in browser
+    * Good for Dashboard(e.g., wpAdmin, or settings-profile)
+    * Single page apps with many interactions
+    * Bad for SEO
+    * Slow loading
 
-* **SSR** When user enters site: JavaScript is executed on the server before sending rendered HTML, leading to a faster initial display of content.
-
-* Good for  content rich apps where SEO is important.
-* WHen page loads first then we use SSG and SSR,after when we change routes pages doesn't refresh because of React using CSR
-
-    
+* **SSR** 
+    * Renders page on server,than send that html to browser
+    * Faster loading 
+    * Good SEO
 
 
 ## 3. API Routes
