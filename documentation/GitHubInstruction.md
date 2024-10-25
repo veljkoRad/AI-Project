@@ -48,6 +48,15 @@
         * ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGLIe10TJ94C9H3KdfHiHi9c/3O6LWPfUdkkojcWzzVI your-email@example.com
     * go to github => settings => ssh keys => add new key, paste my ssh key and give title like "My laptop Key" and for work "Job PC Key"
 
+    ## Creating new branch
+    * ```git checkout -b ai-site-next``` -create new branch
+    * ```git checkout -D ai-site-next``` -delete branch
+    * ```git branch -m next```  - rename branch that you are currently inside to "next"
+    * ```git branch``` -see all branches and in which one I'm currently located
+    * ```git checkout master``` -go to master branch
+    * ```git push ai-site next```
+
+
 
 
 

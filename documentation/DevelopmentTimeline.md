@@ -116,10 +116,14 @@
 * **Fortrade.jsx**
 ### 19.10.2024.
   * **Next.js**
-    *Impoting it for routing, at first
+    * Impoting it for routing, at first
     * Learning and Writing a file **NextJS.md**.
-    
-
+### 25.10.2024
+  * **Creating new Branch for new Next.js**
+    * Creating new branch (GitHubInstructions.md)
+    * Deleting everything from new branch except documentation, readme and git folder.
+    * Git add and git commit.Now when i change from branch to branch I will also get folders for every branch
+    * git push ai-site next
 * **TO DO**
   * Mock API for database?
   * In README.md write whole code what you have learned using same technique as for, check with chatgpt about whole documentation
