@@ -124,6 +124,18 @@
     * Deleting everything from new branch except documentation, readme and git folder.
     * Git add and git commit.Now when i change from branch to branch I will also get folders for every branch
     * git push ai-site next
+
+### 29.10.2024
+  * **Instaling Next.js**
+    * npm instaled next in my new brancj
+    * added dependencies
+    * Added public and pages folder
+    * Added _app.js and index.jsx
+    * Added basic structure in _app.js
+    * Added .gitignore
+
+
+
 * **TO DO**
   * Mock API for database?
   * In README.md write whole code what you have learned using same technique as for, check with chatgpt about whole documentation
