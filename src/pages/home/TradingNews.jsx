@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import BlogNews from './BlogNews'
-import TradingNewsData from "../../data/TradingNewsData"
+import TradingNewsData from "../../data/tradingNewsData"
 
 const TradingNews = ({ }) => {
     const paginationClass = 'trading-pagination';

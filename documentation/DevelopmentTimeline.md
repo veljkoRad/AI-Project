@@ -126,13 +126,13 @@
     * git push ai-site next
 
 ### 29.10.2024
-  * **Instaling Next.js**
-    * npm instaled next in my new brancj
-    * added dependencies
-    * Added public and pages folder
-    * Added _app.js and index.jsx
-    * Added basic structure in _app.js
-    * Added .gitignore
+  * **Migrating to Next.js**
+    * npm instaled next in my new branch
+    * Starting with migrating which is defined in **NexJs.md**
+    ### 30.10.2024
+    * Finished migrating
+    * Added Routing in navbar
+    * Added style for Active button
 
 
 
