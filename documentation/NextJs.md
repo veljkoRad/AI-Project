@@ -57,6 +57,7 @@
     * **.next** folder recreates everytime I run npm run dev. It's okay to delete this whole folder because I clear cache and free up space
     * adding  **public** and pages **folders**
     * In pages I must have **index.jsx** and it can't be in subfolder
+    * added .gitignore so that my project doesn't add node modules all the time it takes much time.
 * **pages/_app.js** 
     * is optional but If I want to include material UI , css, and others I will need this.
     * When I create this file my page stop working until I add basic structure (like index.js)
@@ -69,7 +70,10 @@
 
         export default MyApp;
         ```
-* added .gitignore so that my project doesn't add node modules all the time it takes much time.
+    * imported Head
+    * Added Head abouve ```<Component>``` and give them <></> as parent
+    * instaled material UI
+    * imported createTheme, ThemeProvider,CssBaseline 
+
 ## next to do:
 * Add head in _app.js and meta, title.
-* Add materialUI

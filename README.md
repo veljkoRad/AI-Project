@@ -47,4 +47,5 @@
 * Importance of maintaining thorough documentation (e.g., React.md, GitHubInstructions.md, NextJS.md) to track project development and provide guidance.
 
 ### 11. Introduction to Next.js
-* Initial exploration of Next.js for routing, indicating a move towards a more structured approach to building applications with server-side rendering capabilities.
+* Moving to Next,js because of SEO, I need good SEO for Blog site, plus it has router, and more things.
+* Migrating: index.html,and index.js => src>pages>_app.jsx,  App.js => src>pages>index.jsx, Home.jsx => src>pages>home>index.jsx
