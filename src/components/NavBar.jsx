@@ -12,7 +12,7 @@ const Header = () => {
     const router = useRouter();
 
     // Page Routes data
-    const pages = [{ name: 'Home', href: '/' }, { name: 'AI News', href: '/ai-news' }, { name: 'Trading', href: '/' }, { name: 'Webinars', href: '/' }];
+    const pages = [{ name: 'Home', href: '/' }, { name: 'AI News', href: '/ai-news' }, { name: 'Trading', href: '/trading' }, { name: 'Webinars', href: '/webinars' }];
 
     // Search Field Component
     const NavTextField = styled((props) => (

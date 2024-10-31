@@ -133,11 +133,17 @@
     * Finished migrating
     * Added Routing in navbar
     * Added style for Active button
+    ### 31.10.2024
+    * Created all pages active (Home, AI News, Trading, Webinars)
+    * Deleted **BannerHome** and created dynamic banner Titles
+      * Created bannerData where I add Titles for al routes
+      * In every route I imported this data and added as child component to banner his specific title
+      * Fixed space between blue and white part of title ,fixed inside banner
 
 
 
 * **TO DO**
-  * Mock API for database?
+  *SManji Banner size za mobilni i tablete.
   * In README.md write whole code what you have learned using same technique as for, check with chatgpt about whole documentation
       ```
       * React

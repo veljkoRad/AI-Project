@@ -4,16 +4,15 @@ import Footer from '../../components/Footer'
 import Banner from '../../components/Banner'
 import bannerData from "../../data/bannerData"
 
-
-const AiNews = () => {
+const Webinars = () => {
     return (
         <>
             <NavBar />
-            <Banner data={bannerData.aiNews} />
-            <div>This is AI News page</div>
+            <Banner data={bannerData.webinars} />
+            <div>This is Webinars page</div>
             <Footer />
         </>
     )
 }
 
-export default AiNews
+export default Webinars

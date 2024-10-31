@@ -1,11 +1,10 @@
 import React from "react"
 import { styled } from "@mui/material/styles"
-import { Box } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 
 
 
-const Banner = ({ children }) => {
-
+const Banner = ({ data }) => {
     // Banner Background Component
     const BannerBg = styled(Box)({
         backgroundImage: "url('/images/arms-background.png')",
@@ -30,7 +29,18 @@ const Banner = ({ children }) => {
         // because BannerBg and BannerContainer are styled components I cannot use atribute like in box "component" that's why I use "as"
         <BannerBg as='main'>
             <BannerContainer as='div'>
-                {children}
+                <Typography variant="h1" align="center"  >
+                    <Box component="span" sx={{ color: "secondary.main", display: "inline" }}>
+                        {data.blueMain}
+                    </Box>
+                    {data.blueMain === "Empower" && " "}
+                    <Box component="span" sx={{ color: "text.primary", display: "inline" }}>
+                        {data.whiteMain}
+                    </Box>
+                </Typography>
+                <Typography variant="subtitle1" sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
+                    {data.subtitle}
+                </Typography>
             </BannerContainer>
         </BannerBg>
     )
