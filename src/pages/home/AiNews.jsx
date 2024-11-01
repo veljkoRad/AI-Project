@@ -1,6 +1,6 @@
 import React from 'react'
 import BlogNews from './BlogNews'
-import { NewsSectionTitle } from '../../styles/homePageStyled'
+import { NewsSectionTitle } from '../../styles/homeStyled'
 import { Container } from '@mui/material'
 import AiNewsData from '../../data/aiNewsData'
 

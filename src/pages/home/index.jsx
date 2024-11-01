@@ -6,7 +6,7 @@ import TradingNews from "./TradingNews"
 import Fortrade from "./Fortrade"
 import Footer from "../../Components/Footer"
 // Styles
-import { NewsSection } from "../../styles/homePageStyled"
+import { NewsSection } from "../../styles/homeStyled"
 import AiNews from "./AiNews"
 import bannerData from "../../data/bannerData"
 

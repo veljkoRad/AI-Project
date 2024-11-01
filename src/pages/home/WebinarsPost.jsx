@@ -1,7 +1,7 @@
 import React from "react"
 import { Stack, Typography, Box, Container } from "@mui/material"
 import { PlayArrow } from "@mui/icons-material"
-import { WebinarCard, WebinarCardMedia, WebinarIconButton, NewsSectionTitle } from "../../styles/homePageStyled"
+import { WebinarCard, WebinarCardMedia, WebinarIconButton, NewsSectionTitle } from "../../styles/homeStyled"
 
 
 const WebinarsPost = () => {

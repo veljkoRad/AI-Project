@@ -28,8 +28,7 @@ const theme = createTheme({
     h1: {
       fontSize: '64px',
       fontWeight: 700,
-      '@media (min-width:0)': { fontSize: '28px' },
-      '@media (min-width:500px)': { fontSize: '38px' },
+      '@media (min-width:0)': { fontSize: '38px' },
       '@media (min-width:600px)': { fontSize: '48px' },
       '@media (min-width:900px)': { fontSize: '64px' },
 

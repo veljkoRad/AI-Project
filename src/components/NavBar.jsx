@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { AppBar, Box, Toolbar, TextField, IconButton, Drawer, List, ListItem, ListItemText, colors } from '@mui/material';
-import { LogoIcon } from "../styles/pageStyled"
+import { LogoIcon } from "../styles/componentStyled"
 import { styled } from "@mui/material/styles"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';

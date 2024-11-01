@@ -1,5 +1,5 @@
 import React from "react"
-import { LogoIcon } from "../styles/pageStyled"
+import { LogoIcon } from "../styles/componentStyled"
 import { Box, Container, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 import { BorderBottom } from "@mui/icons-material"

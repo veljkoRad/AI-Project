@@ -6,16 +6,22 @@ import { Box, Typography } from "@mui/material"
 
 const Banner = ({ data }) => {
     // Banner Background Component
-    const BannerBg = styled(Box)({
+    const BannerBg = styled(Box)(({ theme }) => ({
         backgroundImage: "url('/images/arms-background.png')",
         backgroundSize: 'cover',
-        minHeight: '407px',
+        minHeight: data.bannerHeight,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         display: 'flex',
         justifyContent: 'center',
-        padding: '1rem'
-    })
+        padding: '1rem',
+        [theme.breakpoints.down('md')]: {
+            minHeight: '305px'
+        },
+        [theme.breakpoints.down('sm')]: {
+            minHeight: '242px'
+        }
+    }))
 
     //Banner Container Component
     const BannerContainer = styled(Box)({
@@ -38,7 +44,7 @@ const Banner = ({ data }) => {
                         {data.whiteMain}
                     </Box>
                 </Typography>
-                <Typography variant="subtitle1" sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
+                <Typography variant="subtitle1" sx={{ textAlign: { xs: 'center', sm: 'left' }, display: { xs: 'none', sm: 'block' } }}>
                     {data.subtitle}
                 </Typography>
             </BannerContainer>

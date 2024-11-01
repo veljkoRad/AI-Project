@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { BlogCardActions, BlogCardContent, BlogCardMedia, BlogButtonTypography, BlogPagination } from "../../styles/homePageStyled";
+import { BlogCardActions, BlogCardContent, BlogCardMedia, BlogButtonTypography, BlogPagination } from "../../styles/homeStyled";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper/modules";
 import 'swiper/css/bundle'; //for Styling Pagination dots
@@ -25,9 +25,9 @@ const BlogNews = ({ paginationClass, newsData }) => {
                 },
             }}
         >
-            <BlogCardMedia image={post.image} title={post.title} />
+            <BlogCardMedia image={post.image} title={post.name} />
             <BlogCardContent>
-                <Typography variant="subtitle1">{post.content}</Typography>
+                <Typography variant="subtitle1">{post.title}</Typography>
             </BlogCardContent>
             <BlogCardActions>
                 <Button size="medium" color="secondary" variant="outlined">
