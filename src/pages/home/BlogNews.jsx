@@ -15,7 +15,7 @@ const BlogNews = ({ paginationClass, newsData }) => {
 
     // SinglePost Component, I did like this instead of defining and mapping Card two times
     const SinglePost = newsData.map((post, index) => (
-        <Card
+        <Card component='article'
             key={index}
             variant="outlined"
             sx={{

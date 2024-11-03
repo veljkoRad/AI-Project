@@ -2,13 +2,14 @@ import React from "react"
 import { Stack, Typography, Box, Container } from "@mui/material"
 import { PlayArrow } from "@mui/icons-material"
 import { WebinarCard, WebinarCardMedia, WebinarIconButton, NewsSectionTitle } from "../../styles/homeStyled"
+import webinarsData from "../../data/webinarsData"
 
-
+const data=webinarsData;
 const WebinarsPost = () => {
 
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="md" component='section'>
             <NewsSectionTitle
                 variant="body2"
                 sx={{
@@ -43,8 +44,8 @@ const WebinarsPost = () => {
                 <WebinarCard >
                     <WebinarCardMedia
                         // @ts-ignore
-                        component="img" src="images/bull-runing.png" title="bull runing" />
-                    <WebinarIconButton disableFocusRipple disableRipple color="secondary">
+                        component="img" src={data[0].img} title="bull runing" />
+                    <WebinarIconButton disableFocusRipple disableRipple>
                         <PlayArrow sx={{ fontSize: 60, color: 'white' }} />
                     </WebinarIconButton>
                 </WebinarCard>

@@ -55,6 +55,11 @@
     * ```git branch``` -see all branches and in which one I'm currently located
     * ```git checkout master``` -go to master branch
     * ```git push ai-site next```
+    ### Puling new branch from github
+    * ```git fetch ai-site```
+    * ```git branch -r``` - r  stands for remote, with this I see what branches in github I have.
+    * ```git checkout -b next ai-site/next```
+    
 
 
 

@@ -7,7 +7,8 @@ import AiNewsData from '../../data/aiNewsData'
 const AiNews = () => {
     const paginationClass = 'ai-pagination'
     return (
-        <Container maxWidth="md" sx={{ position: 'relative' }}>
+        
+        <Container component='section' maxWidth="md" sx={{ position: 'relative' }}>
             <NewsSectionTitle variant="body2" >
                 AI News
             </NewsSectionTitle>

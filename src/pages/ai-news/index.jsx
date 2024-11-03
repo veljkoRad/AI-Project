@@ -3,7 +3,8 @@ import NavBar from '../../components/NavBar'
 import Footer from '../../components/Footer'
 import Banner from '../../components/Banner'
 import bannerData from "../../data/bannerData"
-import Blogs from './Blogs'
+import BlogsAll from '../../components/BlogsAll'
+import AiNewsData from '../../data/aiNewsData'
 
 
 const AiNews = () => {
@@ -11,7 +12,7 @@ const AiNews = () => {
         <>
             <NavBar />
             <Banner data={bannerData.aiNews} />
-            <Blogs />
+            <BlogsAll data={AiNewsData} />
             <Footer />
         </>
     )

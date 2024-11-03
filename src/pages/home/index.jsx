@@ -3,7 +3,6 @@ import NavBar from "../../Components/NavBar"
 import Banner from "../../Components/Banner"
 import WebinarsPost from "./WebinarsPost"
 import TradingNews from "./TradingNews"
-import Fortrade from "./Fortrade"
 import Footer from "../../Components/Footer"
 // Styles
 import { NewsSection } from "../../styles/homeStyled"
@@ -17,11 +16,10 @@ const Home = () => {
         <>
             <NavBar />
             <Banner data={bannerData.home} />
-            <NewsSection as="section" >
-                <AiNews />
-                <WebinarsPost />
+            <NewsSection as='section' >
+                <AiNews  />
+                <WebinarsPost  />
             </NewsSection>
-            <Fortrade />
             <TradingNews />
             <Footer />
         </>

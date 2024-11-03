@@ -1,7 +1,9 @@
-
+section {
+  padding: 0 2000px;
+}
 /* Main Scrollbar style */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 6px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -33,10 +35,10 @@
 .menuActive {
   color: #00FBF4;
   text-decoration: none;
-  font-weight:400;
+  font-weight:500;
 }
 .menuDefault {
   color: #fff;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { AppBar, Box, Toolbar, TextField, IconButton, Drawer, List, ListItem, ListItemText, colors } from '@mui/material';
-import { LogoIcon } from "../styles/componentStyled"
+import { LogoIcon } from '../styles/componentStyled';
+import { AppBar, Toolbar, TextField, IconButton, Drawer, List, ListItem, ListItemText, colors } from '@mui/material';
 import { styled } from "@mui/material/styles"
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -14,18 +14,7 @@ const Header = () => {
     // Page Routes data
     const pages = [{ name: 'Home', href: '/' }, { name: 'AI News', href: '/ai-news' }, { name: 'Trading', href: '/trading' }, { name: 'Webinars', href: '/webinars' }];
 
-    // Search Field Component
-    const NavTextField = styled((props) => (
-        <TextField
-            variant="outlined"
-            color='secondary'
-            {...props}
-            size='small'
-            placeholder="Search"
-            focused
-            hiddenLabel
-        />
-    ))({})
+
     // Menu Item Component
     const NavBarListItem = styled(ListItem)(({ theme }) => ({
         cursor: 'pointer',
@@ -48,11 +37,15 @@ const Header = () => {
 
     return (
         <AppBar color='primary' position='sticky' >
-            <Toolbar >
+            <Toolbar>
 
                 {/* Logo with link to home */}
                 <IconButton href='http://localhost:3000/'  >
-                    <LogoIcon />
+                <LogoIcon
+                    component="img"
+                    src="/images/AI-Trader-Logo.png"
+                    alt="AI Trader Logo" 
+                />
                 </IconButton>
 
                 {/* Menu button for mobile view */}
@@ -68,12 +61,25 @@ const Header = () => {
                             <Link key={index} href={page.href} className={router.pathname === page.href ? 'menuActive' : 'menuDefault'}>
                                 <NavBarListItem  >
                                     {/* disableTypography- if I want to apply fontWeight here I must disable child element */}
-                                    <ListItemText primary={page.name} disableTypography size='small' placeholder="Search" sx={{ fontSize: '13px' }} />
+                                    <ListItemText 
+                                        primary={page.name} 
+                                        disableTypography 
+                                        size='small' 
+                                        placeholder="Search" 
+                                        sx={{ fontSize: '13px' }} 
+                                    />
                                 </NavBarListItem>
                             </Link>
                         )
                     )}
-                    <NavTextField />
+                            <TextField
+                                variant="outlined"
+                                color='secondary'
+                                size='small'
+                                placeholder="Search"
+                                focused
+                                hiddenLabel
+                            />
 
                 </List>
 
@@ -91,7 +97,14 @@ const Header = () => {
                                 </NavBarListItem>
                             </Link>
                         ))}
-                        <NavTextField />
+                        <TextField
+                            variant="outlined"
+                            color='secondary'
+                            size='small'
+                            placeholder="Search"
+                            focused
+                            hiddenLabel
+                        />
                     </List>
                 </Drawer>
             </Toolbar>

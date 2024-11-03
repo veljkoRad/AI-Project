@@ -57,7 +57,7 @@ const Fortrade = () => {
 
 
     return (
-        <Box component='section' sx={{ backgroundColor: 'info.main', padding: '2rem 0' }}>
+        <Box component='aside' sx={{ backgroundColor: 'info.main', padding: '2rem 0' }}>
             <Container maxWidth="md">
                 <FortradeStack >
                     <FortradeLogo  // @ts-ignore

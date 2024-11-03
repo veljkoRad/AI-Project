@@ -12,7 +12,7 @@ const TradingNews = ({ }) => {
     }))
 
     return (
-        <Container maxWidth="md" sx={{ padding: '5rem 0' }} component="section">
+        <Container maxWidth="md" sx={{ margin: '5rem auto' }} component="section">
             <Stack spacing={4} sx={{ position: 'relative' }}>
                 <TradingSectionTitle variant="body2">Trading News</TradingSectionTitle>
                 <Typography variant='h2' align='center'>Dynamic

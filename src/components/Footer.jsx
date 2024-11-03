@@ -7,7 +7,6 @@ import { BorderBottom } from "@mui/icons-material"
 const Footer = () => {
 
     const FooterBackground = styled(Box)(({ theme }) => ({
-        padding: '34px 0',
         backgroundColor: theme.palette.primary.light,
         backgroundImage: "url('images/footerBG.png')",
         backgroundSize: '694px 150px',
@@ -18,7 +17,7 @@ const Footer = () => {
     return (
         <FooterBackground // @ts-ignore  
             component="footer">
-            <Container maxWidth="md" >
+            <Container maxWidth="md" sx={{padding: '34px 0 !important',}} >
                 <LogoIcon />
                 <Box component="hr" />
                 <Typography variant="subtitle2" textAlign="right" >
