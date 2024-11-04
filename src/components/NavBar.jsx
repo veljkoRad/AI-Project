@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { LogoIcon } from '../styles/componentStyled';
-import { AppBar, Toolbar, TextField, IconButton, Drawer, List, ListItem, ListItemText, colors } from '@mui/material';
-import { styled } from "@mui/material/styles"
+import { LogoIcon, NavBarListItem } from '../styles/componentStyled';
+import { AppBar, Toolbar, TextField, IconButton, Drawer, List, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Link from 'next/link';
@@ -13,20 +12,6 @@ const Header = () => {
 
     // Page Routes data
     const pages = [{ name: 'Home', href: '/' }, { name: 'AI News', href: '/ai-news' }, { name: 'Trading', href: '/trading' }, { name: 'Webinars', href: '/webinars' }];
-
-
-    // Menu Item Component
-    const NavBarListItem = styled(ListItem)(({ theme }) => ({
-        cursor: 'pointer',
-        padding: `0 ${theme.spacing(3)}`,
-        [theme.breakpoints.down('md')]: {
-            padding: `${theme.spacing(2)} ${theme.spacing(3)}`
-        },
-        transition: 'transform 0.2s ease-in-out',
-        '&:hover': {
-            transform: 'scale(1.1)',
-        },
-    }))
 
     // Toggle state for mobile menu (Drawer)
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -41,11 +26,11 @@ const Header = () => {
 
                 {/* Logo with link to home */}
                 <IconButton href='http://localhost:3000/'  >
-                <LogoIcon
-                    component="img"
-                    src="/images/AI-Trader-Logo.png"
-                    alt="AI Trader Logo" 
-                />
+                    <LogoIcon
+                        component="img"
+                        src="/images/AI-Trader-Logo.png"
+                        alt="AI Trader Logo"
+                    />
                 </IconButton>
 
                 {/* Menu button for mobile view */}
@@ -61,25 +46,25 @@ const Header = () => {
                             <Link key={index} href={page.href} className={router.pathname === page.href ? 'menuActive' : 'menuDefault'}>
                                 <NavBarListItem  >
                                     {/* disableTypography- if I want to apply fontWeight here I must disable child element */}
-                                    <ListItemText 
-                                        primary={page.name} 
-                                        disableTypography 
-                                        size='small' 
-                                        placeholder="Search" 
-                                        sx={{ fontSize: '13px' }} 
+                                    <ListItemText
+                                        primary={page.name}
+                                        disableTypography
+                                        size='small'
+                                        placeholder="Search"
+                                        sx={{ fontSize: '13px' }}
                                     />
                                 </NavBarListItem>
                             </Link>
                         )
                     )}
-                            <TextField
-                                variant="outlined"
-                                color='secondary'
-                                size='small'
-                                placeholder="Search"
-                                focused
-                                hiddenLabel
-                            />
+                    <TextField
+                        variant="outlined"
+                        color='secondary'
+                        size='small'
+                        placeholder="Search"
+                        focused
+                        hiddenLabel
+                    />
 
                 </List>
 
