@@ -49,6 +49,41 @@
 ## Features
 
 ### 1. Routing
+* In **src** folder I create folder **pages**
+* In that new folder  I create index.jsx which is my main page.
+* From here I add folders as other routes(about>index.jsx)
+* Import Link from next
+    * This Link is for redirecting to  other routes which I create.
+* Import useRouter, so I can modify active page
+     ```
+     const router=useRouter();
+    className={router.pathname === page.href ? 'menuActive' : 'menuDefault'}
+    ```
+#### Dynamic Route
+* **Creating dynamic Route** 
+    * create folder **single** in that folder add file ```[id].jsx```
+    * In that folder I import useRouter and says
+        ```
+        const router = useRouter();
+        const { id } = router.query;
+        ```
+    * Now I can see this page ```localhost:3000/single/1```
+* **Conecting it with my blogs**
+    * On button post I put Link from Next.js like this: ```<Link href={`/single/{index}`}>```
+* **Fetch data**
+    * Added news prop to BlogsNews **newsType='ai-news' || 'trading-news'
+    * Passed that prop to Link:
+    ```
+    <Link
+        href={{
+            pathname: `/single/${index}`,
+            query: { newsType }
+        }}>
+    ```
+    * In single page added use Effect so It would catch data on every change(change is click on that single blog) 
+    * In useEffect I choose with newsType what data to pick than from chosen data I pick that Single data (foundSingle)
+
+    
 
 ### 2. Rendering Strategies: SSR, SSG
 

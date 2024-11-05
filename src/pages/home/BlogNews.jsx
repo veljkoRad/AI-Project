@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, Card, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { BlogCardActions, BlogCardContent, BlogCardMedia, BlogButtonTypography, BlogPagination } from "../../styles/homeStyled";
+import Link from "next/link";
+import { Button, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { BlogNewsCardActions, BlogNewsCardContent, BlogNewsCardMedia, BlogNewsTypographyButton, BlogNewsPagination, BlogNewsCard } from "../../styles/homeStyled";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper/modules";
 import 'swiper/css/bundle'; //for Styling Pagination dots
@@ -8,35 +9,37 @@ import 'swiper/css/bundle'; //for Styling Pagination dots
 
 
 
-const BlogNews = ({ paginationClass, newsData }) => {
+const BlogNews = ({ paginationClass, newsData, newsType }) => {
+
     const theme = useTheme();
     //useMediaQuery is React hook from materialUI.Down is max width that size and up is min width
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     // SinglePost Component, I did like this instead of defining and mapping Card two times
     const SinglePost = newsData.map((post, index) => (
-        <Card component='article'
+        <BlogNewsCard component='article'
             key={index}
             variant="outlined"
-            sx={{
-                transition: "transform 0.2s ease-in-out",
-                "&:hover": {
-                    transform: { xs: "none", md: "scale(1.03)" }, // Only hover effect on desktop
-                },
-            }}
+
         >
-            <BlogCardMedia image={post.image} title={post.name} />
-            <BlogCardContent>
+            <BlogNewsCardMedia image={post.image} title={post.name} />
+            <BlogNewsCardContent>
                 <Typography variant="subtitle1">{post.title}</Typography>
-            </BlogCardContent>
-            <BlogCardActions>
-                <Button size="medium" color="secondary" variant="outlined">
-                    <BlogButtonTypography variant="button" color="secondary">
-                        Read More
-                    </BlogButtonTypography>
-                </Button>
-            </BlogCardActions>
-        </Card>
+            </BlogNewsCardContent>
+            <BlogNewsCardActions>
+                <Link
+                    href={{
+                        pathname: `/single/${index}`,
+                        query: { newsType }
+                    }}>
+                    <Button size="medium" color="secondary" variant="outlined">
+                        <BlogNewsTypographyButton variant="button" color="secondary">
+                            Read More
+                        </BlogNewsTypographyButton>
+                    </Button>
+                </Link>
+            </BlogNewsCardActions>
+        </BlogNewsCard>
     ))
 
 
@@ -85,7 +88,7 @@ const BlogNews = ({ paginationClass, newsData }) => {
                     {SinglePost}
                 </Stack>
             )}
-            <BlogPagination className={paginationClass} />
+            <BlogNewsPagination className={paginationClass} />
         </>
 
     );

@@ -12,7 +12,7 @@ const AiNews = () => {
         <>
             <NavBar />
             <Banner data={bannerData.aiNews} />
-            <BlogsAll data={AiNewsData} />
+            <BlogsAll data={AiNewsData} newsType='ai-news' />
             <Footer />
         </>
     )

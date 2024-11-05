@@ -1,18 +1,19 @@
 import React from 'react'
 import BlogNews from './BlogNews'
-import { NewsSectionTitle } from '../../styles/homeStyled'
-import { Container } from '@mui/material'
+import { BlogsNewsTypographyTitle } from '../../styles/homeStyled'
+import { Container, Typography } from '@mui/material'
 import AiNewsData from '../../data/aiNewsData'
 
 const AiNews = () => {
+    // I must have two separate classes so it my pagination dots would load two times.
     const paginationClass = 'ai-pagination'
     return (
-        
+
         <Container component='section' maxWidth="md" sx={{ position: 'relative' }}>
-            <NewsSectionTitle variant="body2" >
+            <BlogsNewsTypographyTitle variant="body2" >
                 AI News
-            </NewsSectionTitle>
-            <BlogNews paginationClass={paginationClass} newsData={AiNewsData} />
+            </BlogsNewsTypographyTitle>
+            <BlogNews paginationClass={paginationClass} newsData={AiNewsData} newsType='ai-news' />
         </Container>
     )
 }

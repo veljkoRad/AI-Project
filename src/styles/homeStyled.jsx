@@ -3,7 +3,8 @@ import { Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton 
 
 
 
-// AiNews.jsx Start
+
+// Ai and Trading blogs Container Start
 export const NewsSection = styled(Box)(({ theme }) => ({
     padding: `${theme.spacing(20)} 0`,
     background: 'url("images/ai-news-background.png")',
@@ -12,37 +13,49 @@ export const NewsSection = styled(Box)(({ theme }) => ({
     backgroundPosition: 'left',
     backgroundColor: theme.palette.primary.light
 }))
+// Ai and Trading blogs Container End
 
-export const NewsSectionTitle = styled(Typography)(({ theme }) => ({
+// BlogNews Start
+export const BlogsNewsTypographyTitle = styled(Typography)(({ theme }) => ({
     color: theme.palette.secondary.main,
+    marginBottom: theme.spacing(6),
     textAlign: 'left',
     // when I want to use the dynamic expressions as a key, I need to wrap it in square brackets [].down() is a method
     [theme.breakpoints.down('md')]: {
         textAlign: 'center',
     },
-    marginBottom: theme.spacing(6)
 }))
 
-export const BlogCardMedia = styled(CardMedia)({
+export const BlogNewsCard = styled(Card)(({ theme }) => ({
+    transition: "transform 0.2s ease-in-out",
+    transform: '"scale(1.03)"',
+    "&:hover": {
+        [theme.breakpoints.down('md')]: {
+            transform: 'none'
+        }
+    },
+}))
+
+export const BlogNewsCardMedia = styled(CardMedia)({
     height: '183px'
 })
 
-export const BlogCardContent = styled(CardContent)(({ theme }) => ({
+export const BlogNewsCardContent = styled(CardContent)(({ theme }) => ({
     minHeight: '116px',
     [theme.breakpoints.down('md')]: {
         minHeight: '64px'
     }
 }))
 
-export const BlogCardActions = styled(CardActions)({
+export const BlogNewsCardActions = styled(CardActions)({
     padding: '8px 16px 16px'
 })
 
-export const BlogButtonTypography = styled(Typography)({
+export const BlogNewsTypographyButton = styled(Typography)({
     textTransform: 'capitalize'
 })
 
-export const BlogPagination = styled('div')(({ theme }) => ({
+export const BlogNewsPagination = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
     position: 'absolute',
@@ -56,10 +69,10 @@ export const BlogPagination = styled('div')(({ theme }) => ({
         display: 'flex'
     }
 }))
-// AiNews.jsx End
+// BlogNews End
 
 
-// WebinarPost.jsx Start
+// WebinarPost Start
 export const WebinarCard = styled(Card)(({ theme }) => ({
     border: 'none',
     maxWidth: '100%',
@@ -89,4 +102,11 @@ export const WebinarIconButton = styled(IconButton)(({ theme }) => ({
         opacity: 0.9
     },
 }))
-// WebinarPost.jsx End
+// WebinarPost End
+
+// TradingNews Start
+export const TradingNewsTypography = styled(Typography)(({ theme }) => ({
+    color: theme.palette.secondary.main,
+    textAlign: 'center'
+}))
+// TradingNews End

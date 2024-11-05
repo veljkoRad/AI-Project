@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material"
+import { Box, Button, Card, CardContent, CardMedia, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles";
 
 // BlogsAll Start
@@ -24,6 +24,8 @@ export const BlogsAllCard = styled(Card)(({ theme }) => ({
 export const BlogsAllCardMedia = styled(CardMedia)(({ theme }) => ({
     backgroundSize: '415px 234px;',
     backgroundPosition: 'center',
+    position: 'relative',
+    cursor: 'pointer',
     minWidth: '280px',
     height: '234px',
     [theme.breakpoints.down('sm')]: {
@@ -46,5 +48,22 @@ export const BlogsAllTypographyTitle = styled(Typography)({
 export const BlogsAllTypographyContent = styled(Typography)({
     overflow: 'hidden',
     maxHeight: '155px'
+})
+
+export const BlogsAllBoxHover = styled(Box)({
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    background: 'rgb(0, 0, 0, 0.8)',
+    transition: ' 2s ease',
+})
+export const BlogsAllButton = styled(Button)({
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%,-50%)',
+    zIndex: '1',
+    background: '#000',
 })
 // BlogsAll End

@@ -11,7 +11,7 @@ const Trading = () => {
         <>
             <NavBar />
             <Banner data={bannerData.trading} />
-            <BlogsAll data={tradingNewsData} />
+            <BlogsAll data={tradingNewsData} newsType='trading-news' />
             <Fortrade />
             <Footer />
         </>

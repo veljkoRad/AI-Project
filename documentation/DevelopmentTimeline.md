@@ -3,7 +3,6 @@
 # Development Timeline
 
 #### 07.10.2024
-
 * **Initial Setup**
   * Created the project using `create-react-app`.
   * Deleted files that I don't need right now ( reportWebVitals.js,app.css, App.test.js, setupTest.js, reactIcon... )
@@ -17,11 +16,10 @@
   * First Implemetation of `map()` for my header pages
     #### 08.10.2024
   * Added responsive sx styling
-  * Added \*`<Drawer />` so that I have responsive menu with toggle button
+  * Added `<Drawer />` so that I have responsive menu with toggle button
   * Added TextField
 
 #### 09.10.2024
-
 * Redesign of Header based by website appleAI-Blog
 * Created folder structure: **documentation**, **home**, **components**.
 * Created `Home.js` and `Banner.js`
@@ -33,7 +31,6 @@
   * Component atributes will stay inline while styled components should be for styling only
 
 ### 10.10.2024
-
 * **AiNews.jsx**
   * Added Box component with padding as a top element
   * Added Card, CardMedia, CardActions , to define my Blog post
@@ -45,7 +42,6 @@
   * Changed names of styled components to be related to component that are located in.
 
 ### 11.10.2024
-
 * **WebinarsPost.jsx**
   * Added two articles:left-text,right-video
   * Defined WebinarVideo Outside JSX
@@ -53,7 +49,6 @@
   * Changed all padding values in rem so it would look better because of proportions
 
 ### 12.10.2024
-
 * **GitHub**
   * Installed local git repository for this project
   * Installed remote git for this project
@@ -64,12 +59,12 @@
   * created GitHubInstructions.md
 
 ### 13.10.2024
-
 * **styled components**
   * Added styled components in newsAI for: section box, section title,everything except Swiper and SwiperSlide..
   * Added textfield style in createTheme
     * Instead of prop slots defined it with class in createTheme
-      \*Added also atributes in styled component.
+    *Added also atributes in styled component.
+
   ### 14.10.2024
   * **Code Structure**
     * Understood that styled component is HOF
@@ -80,7 +75,6 @@
     * Updated `README.md` with more detailed process
 
 ### 15.10.2024.
-
 * **Fixing Errors**
   * In console I got some errors like
     * h2 cannot be child of parent h2
@@ -95,7 +89,6 @@
   * Also better code structure to put this two in separate components
 
 ### 16.10.2024.
-
 * **Footer.jsx**
   * Added footer
   * added **PagedStyled.jsx** so I can add styles for components that repeats(LogoIcon in navbar and footer)
@@ -110,10 +103,8 @@
   * paginationClass* id doesn't work if copied with same name
   * newsData -AiNewsData and TrendingNewsData has different values.
 * **AiNews** and **TradingNews**
-
   * Within them I define these two different props
   * I also set container for each,I need this component to be separate because they have different content(TradingNews has h2 )
-
 * **spacing**
   * Definition
     * `useTheme{ spacing:4}`
@@ -124,13 +115,11 @@
 * **Fortrade.jsx**
 
 ### 19.10.2024.
-
 * **Next.js**
   * Impoting it for routing, at first
   * Learning and Writing a file **NextJS.md**.
 
 ### 25.10.2024
-
 * **Creating new Branch for new Next.js**
   * Creating new branch (GitHubInstructions.md)
   * Deleting everything from new branch except documentation, readme and git folder.
@@ -138,7 +127,6 @@
   * git push ai-site next
 
 ### 29.10.2024
-
 * **Migrating to Next.js**
   * npm instaled next in my new branch
   * Starting with migrating which is defined in **NexJs.md**
@@ -148,7 +136,6 @@
   * Added style for Active button
 
 ### 31.10.2024
-
 * Created all pages active (Home, AI News, Trading, Webinars)
 * Deleted **BannerHome** and created dynamic banner Titles
   * Created bannerData where I add Titles for al routes
@@ -156,7 +143,6 @@
   * Fixed space between blue and white part of title ,fixed inside banner
 
 ### 1-2.11.2024
-
 * **AI NEWS** route
   * For blogs data added content next to title.
   * Created AI page with all blogs on page.
@@ -166,18 +152,36 @@
   * Responsive style.
 
 ### 3.11.2024
-
 * Created **Webinar route** for desktop-mobie
 * Added webinarsData so I have same data on home and webinar route.
 * Moved Fortrade.jsx to components and imported it in trading isntead of home.It's really easy to manipulate with componentns
-* Started to arange stylesd component.
+* Started to arange styled components.
   * Putting all in specific style files
   * Naming rules of styles "BannerBoxBg" -first name of section,second name of materialui component, third if I have two BOx in banner section, than I add this extra detail(bg).
   * Banner component done, do other component styling same as this one.
+### 4-5.11.2024
+* Finished with arange styled components.
+* **Single post**
+  * Creating file for dynamic rout and defining it
+  * Conecting it with my blogs
+  * Fecthing data from Blogs
+* Added Button on hover on BlogsALL
+    * Added useState
+    * Added event CardMedia onMouseEnter,onMouseLeaves which follows is it hovered or not
+    * onMouseEnter changes state to true,onMouseLeaves changes to null
+    * when state is true then show me button
+
 
 * **TO DO**
-  * Single page
-  * error page
+* Struture styled for webinar route and blogass
+  * Changes:
+    * Fill desktop size(there is empty spaces everywhere)
+    * Add more post to home page
+    * Separate Webinar from Ai section
+    * Webinars should have two columns left is fortrade banner, right is webinar video
+    * in trading and AI news I should put fortrade section as it is one of the blogs.
+    * Hero Banners with dynamic images with pagination dot and with
+  * 404 page
   * Search page
   * SSG SSR
   * CMS

@@ -17,8 +17,8 @@ const Home = () => {
             <NavBar />
             <Banner data={bannerData.home} />
             <NewsSection as='section' >
-                <AiNews  />
-                <WebinarsPost  />
+                <AiNews />
+                <WebinarsPost />
             </NewsSection>
             <TradingNews />
             <Footer />

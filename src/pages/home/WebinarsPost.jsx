@@ -1,16 +1,15 @@
 import React from "react"
 import { Stack, Typography, Box, Container } from "@mui/material"
 import { PlayArrow } from "@mui/icons-material"
-import { WebinarCard, WebinarCardMedia, WebinarIconButton, NewsSectionTitle } from "../../styles/homeStyled"
+import { WebinarCard, WebinarCardMedia, WebinarIconButton, BlogsNewsTypographyTitle } from "../../styles/homeStyled"
 import webinarsData from "../../data/webinarsData"
 
-const data=webinarsData;
+const data = webinarsData;
 const WebinarsPost = () => {
-
 
     return (
         <Container maxWidth="md" component='section'>
-            <NewsSectionTitle
+            <BlogsNewsTypographyTitle
                 variant="body2"
                 sx={{
                     margin: {
@@ -19,7 +18,7 @@ const WebinarsPost = () => {
                     }
                 }}>
                 Join our next Webinar
-            </NewsSectionTitle>
+            </BlogsNewsTypographyTitle>
             <Stack
                 direction={{ xs: 'column', md: 'row' }}
                 alignItems={{ xs: 'center', md: 'normal' }}
