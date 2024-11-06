@@ -81,8 +81,8 @@ const theme = createTheme({
   components: {
     MuiContainer: {
       styleOverrides: {
-        root: { 
-          padding:'0 30px !important',
+        root: {
+          padding: '0 30px !important',
         }
       }
     },
@@ -91,9 +91,9 @@ const theme = createTheme({
         root: {
           display: 'flex',
           justifyContent: 'space-between',
-          padding:'0 30px !important',
+          padding: '0 30px !important',
           // I insert maxWidth here because appBar must have fullWidth
-          maxWidth: '1024px',
+          maxWidth: '1280px',
           width: '100%',
           margin: 'auto',
           minHeight: 48,
@@ -139,9 +139,13 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: ({ theme }) => ({
-          maxWidth: '300px',
+          width: '100%',
+          maxWidth: '450px',
           backgroundColor: theme.palette.primary.main,
           border: 'solid 1px #fff',
+          '@media (max-width:991px)': { //I must define like this to override default style
+            maxWidth: '350px'
+          }
         })
       }
     },

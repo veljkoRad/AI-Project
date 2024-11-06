@@ -10,7 +10,6 @@ export const BlogsAllBox = styled(Box)({
 
 export const BlogsAllCard = styled(Card)(({ theme }) => ({
     maxWidth: '100%',
-    maxHeight: '236px',
     display: 'flex',
     border: '1px,solid #fff',
     [theme.breakpoints.down('sm')]: {
@@ -22,12 +21,12 @@ export const BlogsAllCard = styled(Card)(({ theme }) => ({
 }))
 
 export const BlogsAllCardMedia = styled(CardMedia)(({ theme }) => ({
-    backgroundSize: '415px 234px;',
+    backgroundSize: 'contain',
     backgroundPosition: 'center',
     position: 'relative',
     cursor: 'pointer',
-    minWidth: '280px',
-    height: '234px',
+    minWidth: '450px',
+    height: '470px',
     [theme.breakpoints.down('sm')]: {
         backgroundSize: '450px 254px',
         minWidth: '200px',

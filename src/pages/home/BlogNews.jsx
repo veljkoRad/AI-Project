@@ -84,7 +84,7 @@ const BlogNews = ({ paginationClass, newsData, newsType }) => {
 
                 </Swiper>
             ) : (
-                <Stack direction="row" spacing={4} sx={{ justifyContent: 'space-between' }}>
+                <Stack direction="row" spacing={7} sx={{ justifyContent: 'space-between' }}>
                     {SinglePost}
                 </Stack>
             )}

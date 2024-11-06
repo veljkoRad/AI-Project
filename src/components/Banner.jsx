@@ -1,8 +1,8 @@
 import React from "react"
 import {
-    BannerBoxBg , 
-    BannerBoxContainer, 
-    BannerBoxBlue, 
+    BannerBoxBg,
+    BannerBoxContainer,
+    BannerBoxBlue,
     BannerBoxWhite,
     BannerTypographySubtitle
 } from "../styles/componentStyled"
@@ -15,11 +15,14 @@ const Banner = ({ data }) => {
     return (
         // because BannerBg and BannerContainer are styled components I cannot use atribute like in box "component" that's why I use "as"
         <BannerBoxBg as='main'>
-            <BannerBoxContainer 
-                as='div' 
-                sx={{minHeight: data.bannerHeight}}
+            <BannerBoxContainer
+                as='div'
+                sx={{
+                    minHeight: data.bannerHeight,
+                    alignItems: data.bannerAlign
+                }}
             >
-                <Typography variant="h1" align="center">
+                <Typography variant="h1" textAlign='center' >
                     <BannerBoxBlue component="span" >
                         {data.blueMain}
                     </BannerBoxBlue>

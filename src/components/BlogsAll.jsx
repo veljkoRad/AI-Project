@@ -21,8 +21,8 @@ const BlogsAll = ({ data, newsType }) => {
 
     return (
         <BlogsAllBox component='article' >
-            <Container maxWidth="md">
-                <Stack gap='122px'>
+            <Container maxWidth="lg">
+                <Stack gap='50px'>
                     {data.map((item, index) => (
                         <BlogsAllCard key={index} >
                             <BlogsAllCardMedia

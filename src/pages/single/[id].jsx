@@ -46,14 +46,11 @@ const Single = () => {
                         </Card>
                         <Typography color='secondary' style={{ fontWeight: '600', textAlign: 'center' }}>{single.title}</Typography>
                         <Typography>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quod id voluptatum libero impedit officia vero laudantium molestiae perspiciatis veniam consequatur dolores dolore laborum excepturi. Fuga rem earum minima! Dolores. <br />
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui perspiciatis fugiat vel tempora accusantium expedita inventore. Laborum, rem neque fugiat doloribus consequatur nulla! Eos consequatur sit est necessitatibus velit voluptatibus! <br />
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus dolorem quia veritatis dicta molestiae ad aut voluptatem necessitatibus consequatur, eum magnam sequi earum dolores facilis inventore dignissimos eligendi ex tempore?
+                            {single.content}
                         </Typography>
                     </Stack>
                 </Container>
             </Box>
-            <Fortrade />
             <Footer />
         </>
 

@@ -170,6 +170,13 @@
     * Added event CardMedia onMouseEnter,onMouseLeaves which follows is it hovered or not
     * onMouseEnter changes state to true,onMouseLeaves changes to null
     * when state is true then show me button
+### 6.11.2024
+* Make home content bigger-from 1024px to 1280px
+* Blogs Card are now bigger so it fill all space.
+* Fixed my branches
+  * Put my next code(without changes made today) as my main branch
+  * This changes sizes code puted as next branc
+  * changed name of Branch from next to bigger
 
 
 * **TO DO**

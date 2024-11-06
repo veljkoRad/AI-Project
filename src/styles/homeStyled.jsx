@@ -4,8 +4,8 @@ import { Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton 
 
 
 
-// Ai and Trading blogs Container Start
-export const NewsSection = styled(Box)(({ theme }) => ({
+// AiNews Start
+export const AiNewsBox = styled(Box)(({ theme }) => ({
     padding: `${theme.spacing(20)} 0`,
     background: 'url("images/ai-news-background.png")',
     backgroundSize: '1100px 633px',
@@ -13,7 +13,14 @@ export const NewsSection = styled(Box)(({ theme }) => ({
     backgroundPosition: 'left',
     backgroundColor: theme.palette.primary.light
 }))
-// Ai and Trading blogs Container End
+// AiNews End
+
+// Trading Start
+export const TradingNewsBox = styled(Box)(({ theme }) => ({
+    padding: `${theme.spacing(20)} 0`,
+    backgroundColor: theme.palette.primary.main
+}))
+// Trading End
 
 // BlogNews Start
 export const BlogsNewsTypographyTitle = styled(Typography)(({ theme }) => ({
@@ -28,16 +35,13 @@ export const BlogsNewsTypographyTitle = styled(Typography)(({ theme }) => ({
 
 export const BlogNewsCard = styled(Card)(({ theme }) => ({
     transition: "transform 0.2s ease-in-out",
-    transform: '"scale(1.03)"',
     "&:hover": {
-        [theme.breakpoints.down('md')]: {
-            transform: 'none'
-        }
-    },
+        transform: 'scale(1.03)'
+    }
 }))
 
 export const BlogNewsCardMedia = styled(CardMedia)({
-    height: '183px'
+    height: '254px'
 })
 
 export const BlogNewsCardContent = styled(CardContent)(({ theme }) => ({

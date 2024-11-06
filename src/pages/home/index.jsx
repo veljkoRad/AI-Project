@@ -16,10 +16,7 @@ const Home = () => {
         <>
             <NavBar />
             <Banner data={bannerData.home} />
-            <NewsSection as='section' >
-                <AiNews />
-                <WebinarsPost />
-            </NewsSection>
+            <AiNews />
             <TradingNews />
             <Footer />
         </>

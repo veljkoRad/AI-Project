@@ -5,26 +5,29 @@ import { styled } from "@mui/material/styles";
 import { Box, Typography, Stack, Button, ListItem } from "@mui/material";
 
 // Banner Start
-export const BannerBoxContainer = styled(Box)({
-    display: 'flex',
-    padding: '1rem',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    maxWidth: '800px'
-})
-
 export const BannerBoxBg = styled(Box)(({ theme }) => ({
     backgroundImage: "url('/images/arms-background.png')",
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    display: 'flex',
-    justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
         minHeight: '305px'
     },
     [theme.breakpoints.down('sm')]: {
         minHeight: '242px'
+    }
+}))
+
+export const BannerBoxContainer = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    margin: 'auto',
+    padding: '0 30px',
+    width: '100%',
+    maxWidth: '1280px',
+    [theme.breakpoints.down('sm')]: {
+        alignItems: 'center'
     }
 }))
 
