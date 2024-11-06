@@ -81,8 +81,8 @@ const theme = createTheme({
   components: {
     MuiContainer: {
       styleOverrides: {
-        root: { 
-          padding:'0 30px !important',
+        root: {
+          padding: '0 30px !important',
         }
       }
     },
@@ -91,7 +91,7 @@ const theme = createTheme({
         root: {
           display: 'flex',
           justifyContent: 'space-between',
-          padding:'0 30px !important',
+          padding: '0 30px !important',
           // I insert maxWidth here because appBar must have fullWidth
           maxWidth: '1024px',
           width: '100%',
