@@ -174,9 +174,9 @@
 * Make home content bigger-from 1024px to 1280px
 * Blogs Card are now bigger so it fill all space.
 * Fixed my branches
-  * Put my next code(without changes made today) as my main branch
-  * This changes sizes code puted as next branc
-  * changed name of Branch from next to bigger
+  * This new, bigger design is moved to master branch
+  * The first finished designed is in new smaller branch
+  * next branch is delted.
 
 
 * **TO DO**
