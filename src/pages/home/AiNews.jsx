@@ -1,7 +1,7 @@
 import React from 'react'
 import BlogNews from './BlogNews'
 import { AiNewsBox, BlogsNewsTypographyTitle } from '../../styles/homeStyled'
-import { Container, Typography } from '@mui/material'
+import { Container } from '@mui/material'
 import AiNewsData from '../../data/aiNewsData'
 
 const AiNews = () => {
@@ -11,7 +11,7 @@ const AiNews = () => {
         <AiNewsBox>
             <Container component='section' maxWidth="lg" sx={{ position: 'relative' }}>
                 <BlogsNewsTypographyTitle variant="body2" >
-                    AI News
+                    Latest AI News
                 </BlogsNewsTypographyTitle>
                 <BlogNews paginationClass={paginationClass} newsData={AiNewsData} newsType='ai-news' />
             </Container>

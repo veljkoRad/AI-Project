@@ -6,18 +6,18 @@ import { Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton 
 
 // AiNews Start
 export const AiNewsBox = styled(Box)(({ theme }) => ({
-    padding: `${theme.spacing(20)} 0`,
+    padding: `${theme.spacing(15)} 0`,
     background: 'url("images/ai-news-background.png")',
     backgroundSize: '1100px 633px',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'left',
-    backgroundColor: theme.palette.primary.light
+    backgroundColor: theme.palette.primary.dark
 }))
 // AiNews End
 
 // Trading Start
 export const TradingNewsBox = styled(Box)(({ theme }) => ({
-    padding: `${theme.spacing(20)} 0`,
+    padding: `${theme.spacing(15)} 0`,
     backgroundColor: theme.palette.primary.main
 }))
 // Trading End
@@ -25,7 +25,7 @@ export const TradingNewsBox = styled(Box)(({ theme }) => ({
 // BlogNews Start
 export const BlogsNewsTypographyTitle = styled(Typography)(({ theme }) => ({
     color: theme.palette.secondary.main,
-    marginBottom: theme.spacing(6),
+    marginBottom: theme.spacing(4),
     textAlign: 'left',
     // when I want to use the dynamic expressions as a key, I need to wrap it in square brackets [].down() is a method
     [theme.breakpoints.down('md')]: {
@@ -79,9 +79,10 @@ export const BlogNewsPagination = styled('div')(({ theme }) => ({
 // WebinarPost Start
 export const WebinarCard = styled(Card)(({ theme }) => ({
     border: 'none',
-    maxWidth: '100%',
+    maxWidth: '385px',
+    boxShadow: 'none',
     flexGrow: 2,
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.secondary.dark,
     display: 'flex',
     justifyContent: 'space-around',
     position: 'relative',

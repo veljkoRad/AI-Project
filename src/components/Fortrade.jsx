@@ -1,6 +1,5 @@
 import React from 'react'
-import { FortradeStack, FortradeBox, FortradeStackRight, FortradeTypography1, FortradeTypography2, FortradeButton } from '../styles/componentStyled'
-import { Box, Button, Container, Stack, Typography } from '@mui/material'
+import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material'
 
 
 const Fortrade = () => {
@@ -9,24 +8,31 @@ const Fortrade = () => {
 
 
     return (
-        <Box component='aside' sx={{ backgroundColor: 'info.main', padding: '2rem 0' }}>
-            <Container maxWidth="md">
-                <FortradeStack >
-                    <FortradeBox  // @ts-ignore
-                        component='img' src='/images/fortrade-logo.png' />
-                    <FortradeStackRight spacing={3}>
-                        <FortradeTypography1 variant='h3' color='primary' >Explore the World of
-                            Trading Possibilities</FortradeTypography1>
-                        <FortradeTypography2 color='primary' variant='subtitle2'>Your trading Journey starts here.<br />
-                            Create a risk-free account with virtual funds.</FortradeTypography2>
-                        <FortradeButton size="medium" color="primary" variant="contained" >
-                            <Typography variant='button' sx={{ textTransform: 'capitalize' }}>Get Started</Typography></FortradeButton>
-                    </FortradeStackRight>
-                </FortradeStack>
+        <Card sx={{
+            display: 'flex', maxWidth: '100%'
+        }}>
+            <CardMedia component='div'
+                sx={{
+                    backgroundImage: `url("/images/fortrade-logo.png")`,
+                    backgroundColor: '#02706d',
+                    backgroundSize: '250px 71px',
+                    backgroundPosition: 'center',
+                    position: 'relative',
+                    cursor: 'pointer',
+                    minWidth: '450px',
+                    height: '250px',
+                }}>
+            </CardMedia>
+            <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} >
+                <Typography>Your trading Journey starts here</Typography>
+                <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tempora quas non necessitatibus laboriosam. Delectus ducimus quisquam numquam libero reprehenderit sint non molestiae modi, praesentium obcaecati aliquid aliquam? Unde, recusandae!</Typography>
+                <Button variant='outlined' color='secondary'>
+                    <Typography variant='button' sx={{ textTransform: 'capitalize' }}>Get Started</Typography>
+                </Button>
+            </CardContent>
 
-            </Container >
 
-        </Box >
+        </Card >
     )
 }
 

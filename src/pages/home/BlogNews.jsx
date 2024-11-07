@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { Button, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { BlogNewsCardActions, BlogNewsCardContent, BlogNewsCardMedia, BlogNewsTypographyButton, BlogNewsPagination, BlogNewsCard } from "../../styles/homeStyled";
+import Fortrade from "../../components/Fortrade";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper/modules";
 import 'swiper/css/bundle'; //for Styling Pagination dots
+import { BlogNewsCardActions, BlogNewsCardContent, BlogNewsCardMedia, BlogNewsTypographyButton, BlogNewsPagination, BlogNewsCard } from "../../styles/homeStyled";
+import { Button, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 
 
@@ -32,7 +33,7 @@ const BlogNews = ({ paginationClass, newsData, newsType }) => {
                         pathname: `/single/${index}`,
                         query: { newsType }
                     }}>
-                    <Button size="medium" color="secondary" variant="outlined">
+                    <Button size="large" color="secondary" variant="outlined">
                         <BlogNewsTypographyButton variant="button" color="secondary">
                             Read More
                         </BlogNewsTypographyButton>

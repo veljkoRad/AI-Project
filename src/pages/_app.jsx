@@ -10,10 +10,12 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#010A0A",
-      light: "#012423"
+      light: "#012423",
+      dark: '#0D1B1B80'
     },
     secondary: {
       main: "#00FBF4",
+      dark: '#02706d'
     },
     info: {
       main: '#dadada'
@@ -55,7 +57,7 @@ const theme = createTheme({
       fontSize: '17px'
     },
     body2: {
-      fontSize: '14px',
+      fontSize: '17px',
       fontWeight: 600,
       '@media (max-width:991px)': { fontSize: '13px' }
     },

@@ -3,7 +3,7 @@ const bannerData = {
         blueMain: "Empower ",
         whiteMain: ' Your trades',
         subtitle: "AI Strategies for Tomorow's Investors",
-        bannerHeight: '407px',
+        bannerHeight: '357px',
         bannerAlign: 'flex-start'
     },
     aiNews: {

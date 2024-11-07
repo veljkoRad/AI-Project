@@ -11,6 +11,7 @@ import {
     BlogsAllBoxHover,
     BlogsAllButton
 } from '../styles/blogsStyled'
+import Fortrade from './Fortrade'
 import { BlogNewsTypographyButton } from '../styles/homeStyled'
 import { Stack, Container } from '@mui/material'
 
@@ -59,6 +60,7 @@ const BlogsAll = ({ data, newsType }) => {
                             </BlogsAllCardContent>
                         </BlogsAllCard>
                     ))}
+                    <Fortrade />
                 </Stack>
             </Container>
         </BlogsAllBox >

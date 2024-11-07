@@ -133,3 +133,56 @@ export const FortradeButton = styled(Button)(({ theme }) => ({
     }
 }))
 // Fortrade End
+export const NextWebinarStack = styled(Stack)(({ theme }) => ({
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    flexDirection: 'row',
+    [theme.breakpoints.down('md')]: {
+        flexDirection: 'column',
+        gap: '32px'
+    }
+}))
+
+export const NextWebinarBox = styled(Box)(({ theme }) => ({
+    width: '237px',
+    height: 'auto',
+    [theme.breakpoints.down('md')]: {
+        width: '180px'
+    }
+}))
+
+export const NextWebinarStackRight = styled(Stack)(({ theme }) => ({
+    alignItems: 'start',
+    justifyContent: 'center',
+    [theme.breakpoints.down('md')]: {
+        alignItems: 'center'
+    }
+}))
+
+export const NextWebinarTypography1 = styled(Typography)(({ theme }) => ({
+    maxWidth: '356px',
+    textAlign: 'start',
+    [theme.breakpoints.down('md')]: {
+        textAlign: 'center'
+    }
+}))
+
+export const NextWebinarTypography2 = styled(Typography)(({ theme }) => ({
+    [theme.breakpoints.down('md')]: {
+        display: 'none'
+    }
+}))
+
+export const NextWebinarButton = styled(Button)(({ theme }) => ({
+    color: theme.palette.secondary.main,
+    borderColor: theme.palette.secondary.main,
+    border: '1px solid',
+    padding: '6px 37px',
+    transition: "transform 0.2s ease-in-out",
+    '&:hover': {
+        transform: 'scale(1.02)'
+    }
+}))
+// NextWebinar Start
+
+// NextWebinar End

@@ -10,12 +10,16 @@ const TradingNews = ({ }) => {
     return (
         <TradingNewsBox component="section">
             <Container maxWidth="lg" >
-                <Stack spacing={4} sx={{ position: 'relative' }}>
+                <Stack sx={{ position: 'relative' }}>
                     <TradingNewsTypography variant="body2">Trading News</TradingNewsTypography>
-                    <Typography variant='h2' align='center'>Dynamic
-                        <Box component="div" color="secondary.main" >World of Trading</Box>
-                    </Typography>
-                    <BlogNews paginationClass={paginationClass} newsData={TradingNewsData} newsType='trading-news' />
+                    <Typography variant='h2' align='center' sx={{ margin: '5px 0 25px' }} >Dynamic <Box component='span' sx={{ color: '#00FBF4' }}>World of Trading</Box></Typography>
+
+
+                    <BlogNews
+                        paginationClass={paginationClass}
+                        newsData={TradingNewsData}
+                        newsType='trading-news'
+                    />
                 </Stack>
             </Container>
         </TradingNewsBox>

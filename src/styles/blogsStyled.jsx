@@ -3,10 +3,14 @@ import { Box, Button, Card, CardContent, CardMedia, Typography } from "@mui/mate
 import { styled } from "@mui/material/styles";
 
 // BlogsAll Start
-export const BlogsAllBox = styled(Box)({
+export const BlogsAllBox = styled(Box)(({ theme }) => ({
     padding: '80px 0',
     background: 'url("/images/ai-news-background.png")',
-})
+    backgroundColor: theme.palette.primary.dark,
+    backgroundSize: 'contain',
+    backgroundPosition: '-250px',
+    backgroundRepeat: 'no-repeat'
+}))
 
 export const BlogsAllCard = styled(Card)(({ theme }) => ({
     maxWidth: '100%',
@@ -26,7 +30,7 @@ export const BlogsAllCardMedia = styled(CardMedia)(({ theme }) => ({
     position: 'relative',
     cursor: 'pointer',
     minWidth: '450px',
-    height: '470px',
+    height: '250px',
     [theme.breakpoints.down('sm')]: {
         backgroundSize: '450px 254px',
         minWidth: '200px',

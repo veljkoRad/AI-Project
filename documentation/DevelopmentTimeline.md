@@ -177,9 +177,18 @@
   * This new, bigger design is moved to master branch
   * The first finished designed is in new smaller branch
   * next branch is delted.
+### 7.11.2024
+* **Changed images**
+  * Making default dimensions 128px x 711px
+  * Adjusted size on latest blogs,blogs and single blog
+* **NextWebinar.jsx** added to home
+* **Fortrade.jsx** Added to BlogsAll
+
+
 
 
 * **TO DO**
+* Finish stylingh + reposnsive
 * Struture styled for webinar route and blogass
   * Changes:
     * Fill desktop size(there is empty spaces everywhere)

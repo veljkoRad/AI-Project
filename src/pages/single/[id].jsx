@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import NavBar from '../../components/NavBar'
 import Banner from '../../components/Banner'
-import Fortrade from '../../components/Fortrade'
 import Footer from '../../components/Footer'
 import bannerData from '../../data/bannerData'
 import AiNewsData from '../../data/aiNewsData'
@@ -37,7 +36,7 @@ const Single = () => {
             <Box sx={{ backgroundImage: "url('/images/ai-news-background.png')" }}>
                 <Container maxWidth="md" component='section' sx={{ padding: '80px 30px !important' }}>
                     <Stack gap='40px'>
-                        <Card sx={{ position: 'relative', display: 'flex', justifyContent: 'center', maxWidth: '1024px' }}>
+                        <Card sx={{ position: 'relative', display: 'flex', justifyContent: 'center', maxWidth: '1024px', height: '400px' }}>
                             <CardMedia
                                 component="img"
                                 src={single.image}
