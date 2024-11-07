@@ -2,31 +2,31 @@ import React from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
 import {
-    BlogsAllBox,
-    BlogsAllCard,
-    BlogsAllCardMedia,
-    BlogsAllCardContent,
-    BlogsAllTypographyTitle,
-    BlogsAllTypographyContent,
-    BlogsAllBoxHover,
-    BlogsAllButton
+    BlogsBox,
+    BlogsCard,
+    BlogsCardMedia,
+    BlogsCardContent,
+    BlogsTypographyTitle,
+    BlogsTypographyContent,
+    BlogsBoxHover,
+    BlogsButton
 } from '../styles/blogsStyled'
 import Fortrade from './Fortrade'
-import { BlogNewsTypographyButton } from '../styles/homeStyled'
+import { LatestBlogsTypographyButton } from '../styles/homeStyled'
 import { Stack, Container } from '@mui/material'
 
 
 
-const BlogsAll = ({ data, newsType }) => {
+const Blogs = ({ data, newsType }) => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <BlogsAllBox component='article' >
+        <BlogsBox component='article' >
             <Container maxWidth="lg">
                 <Stack gap='50px'>
                     {data.map((item, index) => (
-                        <BlogsAllCard key={index} >
-                            <BlogsAllCardMedia
+                        <BlogsCard key={index} >
+                            <BlogsCardMedia
                                 component='div'
                                 sx={{
                                     backgroundImage: `url(${item.image})`,
@@ -37,34 +37,34 @@ const BlogsAll = ({ data, newsType }) => {
                             >
                                 {hoveredIndex === index && (
 
-                                    <BlogsAllBoxHover>
+                                    <BlogsBoxHover>
                                         <Link
                                             href={{
                                                 pathname: `/single/${index}`,
                                                 query: { newsType }
                                             }}>
-                                            <BlogsAllButton size="medium" color="secondary" variant="outlined"
+                                            <BlogsButton size="medium" color="secondary" variant="outlined"
                                                 sx={{
 
                                                 }}>
-                                                <BlogNewsTypographyButton>Read More</BlogNewsTypographyButton>
+                                                <LatestBlogsTypographyButton>Read More</LatestBlogsTypographyButton>
 
-                                            </BlogsAllButton>
+                                            </BlogsButton>
                                         </Link>
-                                    </BlogsAllBoxHover>
+                                    </BlogsBoxHover>
                                 )}
-                            </BlogsAllCardMedia>
-                            <BlogsAllCardContent>
-                                <BlogsAllTypographyTitle color='secondary' >{item.title}</BlogsAllTypographyTitle>
-                                <BlogsAllTypographyContent >{item.content}</BlogsAllTypographyContent>
-                            </BlogsAllCardContent>
-                        </BlogsAllCard>
+                            </BlogsCardMedia>
+                            <BlogsCardContent>
+                                <BlogsTypographyTitle color='secondary' >{item.title}</BlogsTypographyTitle>
+                                <BlogsTypographyContent >{item.content}</BlogsTypographyContent>
+                            </BlogsCardContent>
+                        </BlogsCard>
                     ))}
                     <Fortrade />
                 </Stack>
             </Container>
-        </BlogsAllBox >
+        </BlogsBox >
     )
 }
 
-export default BlogsAll
+export default Blogs

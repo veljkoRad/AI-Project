@@ -5,8 +5,8 @@ import NavBar from '../../components/NavBar'
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import bannerData from '../../data/bannerData'
-import AiNewsData from '../../data/aiNewsData'
-import TradingNewsData from '../../data/tradingNewsData'
+import aiData from '../../data/aiData'
+import tradingData from '../../data/tradingData'
 import { Box, Container, Card, CardMedia, Stack, Typography } from '@mui/material';
 
 const Single = () => {
@@ -18,7 +18,7 @@ const Single = () => {
     useEffect(() => {
         if (id && newsType) {
             // Choose what data to take
-            const data = newsType === "ai-news" ? AiNewsData : TradingNewsData;
+            const data = newsType === "ai-news" ? aiData : tradingData;
 
             //Now take single data from dataArray
             const foundSingle = data.find((singleData, index) => index === parseInt(id, 10)); // Use parseInt to ensure id is a number

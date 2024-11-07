@@ -4,13 +4,13 @@ import Fortrade from "../../components/Fortrade";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper/modules";
 import 'swiper/css/bundle'; //for Styling Pagination dots
-import { BlogNewsCardActions, BlogNewsCardContent, BlogNewsCardMedia, BlogNewsTypographyButton, BlogNewsPagination, BlogNewsCard } from "../../styles/homeStyled";
+import { LatestBlogsCardActions, LatestBlogsCardContent, LatestBlogsCardMedia, LatestBlogsTypographyButton, LatestBlogsPagination, LatestBlogsCard } from "../../styles/homeStyled";
 import { Button, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 
 
 
-const BlogNews = ({ paginationClass, newsData, newsType }) => {
+const LatestBlogs = ({ paginationClass, newsData, newsType }) => {
 
     const theme = useTheme();
     //useMediaQuery is React hook from materialUI.Down is max width that size and up is min width
@@ -18,29 +18,29 @@ const BlogNews = ({ paginationClass, newsData, newsType }) => {
 
     // SinglePost Component, I did like this instead of defining and mapping Card two times
     const SinglePost = newsData.map((post, index) => (
-        <BlogNewsCard component='article'
+        <LatestBlogsCard component='article'
             key={index}
             variant="outlined"
 
         >
-            <BlogNewsCardMedia image={post.image} title={post.name} />
-            <BlogNewsCardContent>
+            <LatestBlogsCardMedia image={post.image} title={post.name} />
+            <LatestBlogsCardContent>
                 <Typography variant="subtitle1">{post.title}</Typography>
-            </BlogNewsCardContent>
-            <BlogNewsCardActions>
+            </LatestBlogsCardContent>
+            <LatestBlogsCardActions>
                 <Link
                     href={{
                         pathname: `/single/${index}`,
                         query: { newsType }
                     }}>
                     <Button size="large" color="secondary" variant="outlined">
-                        <BlogNewsTypographyButton variant="button" color="secondary">
+                        <LatestBlogsTypographyButton variant="button" color="secondary">
                             Read More
-                        </BlogNewsTypographyButton>
+                        </LatestBlogsTypographyButton>
                     </Button>
                 </Link>
-            </BlogNewsCardActions>
-        </BlogNewsCard>
+            </LatestBlogsCardActions>
+        </LatestBlogsCard>
     ))
 
 
@@ -89,10 +89,10 @@ const BlogNews = ({ paginationClass, newsData, newsType }) => {
                     {SinglePost}
                 </Stack>
             )}
-            <BlogNewsPagination className={paginationClass} />
+            <LatestBlogsPagination className={paginationClass} />
         </>
 
     );
 };
 
-export default BlogNews;
+export default LatestBlogs;

@@ -1,11 +1,11 @@
 import React from "react"
 import NavBar from "../../Components/NavBar"
 import Banner from "../../Components/Banner"
-import TradingNews from "./TradingNews"
+import LatestTrading from "./LatestTrading"
 import NextWebinar from "./NextWebinar"
 import Footer from "../../Components/Footer"
 // Styles
-import AiNews from "./AiNews"
+import LatestAi from "./LatestAi"
 import bannerData from "../../data/bannerData"
 
 
@@ -16,9 +16,9 @@ const Home = () => {
         <>
             <NavBar />
             <Banner data={bannerData.home} />
-            <AiNews />
+            <LatestAi />
             <NextWebinar />
-            <TradingNews />
+            <LatestTrading />
             <Footer />
         </>
     )

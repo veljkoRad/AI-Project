@@ -1,13 +1,12 @@
-import React from 'react'
+import React, {  useState } from 'react'
 import webinarsData from "../../data/webinarsData"
-import { WebinarCard, WebinarCardMedia, WebinarIconButton } from "../../styles/homeStyled"
-import { PlayArrow } from "@mui/icons-material"
-import { Box, Container, Stack, Typography } from '@mui/material'
+import { NextWebinarCard, NextWebinarCardMedia } from "../../styles/homeStyled"
+import { Box, Button, Container, Stack, Typography } from '@mui/material'
 
 
 const NextWebinar = () => {
     const data = webinarsData;
-
+    const [hover, setHover]=useState(null);
 
 
     return (
@@ -16,7 +15,7 @@ const NextWebinar = () => {
                 background: 'linear-gradient(to top, #00FBF4 0%, #071212 100%)', height: '10px',
                 width: '100%'
             }} />
-            <Box component='aside' sx={{ background: "url('/images/next-webinar-bg.png')", backgroundSize: 'contain', backgroundPositionX: "500px", backgroundColor: 'secondary.dark', padding: '1rem 0', backgroundRepeat: 'no-repeat' }}>
+            <Box component='aside' sx={{ background: "url('/images/next-webinar-bg.png')", backgroundSize: 'contain', backgroundPositionX: "150px", backgroundColor: 'secondary.dark', padding: '40px 0', backgroundRepeat: 'no-repeat' }}>
                 <Container maxWidth="lg" component='section'>
                     <Stack
                         direction={{ xs: 'column', md: 'row' }}
@@ -33,7 +32,6 @@ const NextWebinar = () => {
                                 Join our next Webinar
                             </Typography>
                             <Typography
-                                // don't export too many atributes if they related only for this component
                                 variant="h3"
                                 sx={{ maxWidth: '400px' }}
                                 textAlign={{ xs: 'center', md: 'left' }} >
@@ -42,14 +40,25 @@ const NextWebinar = () => {
                             </Typography>
 
                         </Stack>
-                        <WebinarCard >
-                            <WebinarCardMedia
+                        <NextWebinarCard >
+                            <NextWebinarCardMedia
                                 // @ts-ignore
-                                component="img" src={data[0].img} title="bull runing" />
-                            <WebinarIconButton disableFocusRipple disableRipple>
-                                <PlayArrow sx={{ fontSize: 60, color: 'white' }} />
-                            </WebinarIconButton>
-                        </WebinarCard>
+                                component="div" 
+                                sx={{backgroundImage:`url(${data[0].img})`}}
+                                title="bull runing"
+                                onMouseEnter={()=>setHover(1)} 
+                                onMouseLeave={() => setHover(null)}
+                            >
+                                {  hover== 1 && (
+                                    <Box  sx={{position:'absolute',background:'#000',width:'100%',height:'100%', opacity:'0.8', zIndex:'2'}}>
+                                    <Button sx={{
+                                        position:'absolute', top:'50%',left:'50%',transform:'translate(-50%, -50%)',textTransform:'capitalize',zIndex:'3'
+                                    }} color='secondary'size='large' variant='contained' ><Typography variant='body2' color='primary'>Sign Up</Typography></Button>
+                                    </Box>
+                                    )                                    
+                                }
+                             </NextWebinarCardMedia>
+                        </NextWebinarCard>
                     </Stack>
                 </Container>
             </Box  >

@@ -2,8 +2,8 @@ import React from "react"
 import { Box, Button, Card, CardContent, CardMedia, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles";
 
-// BlogsAll Start
-export const BlogsAllBox = styled(Box)(({ theme }) => ({
+// Blogs Start
+export const BlogsBox = styled(Box)(({ theme }) => ({
     padding: '80px 0',
     background: 'url("/images/ai-news-background.png")',
     backgroundColor: theme.palette.primary.dark,
@@ -12,7 +12,7 @@ export const BlogsAllBox = styled(Box)(({ theme }) => ({
     backgroundRepeat: 'no-repeat'
 }))
 
-export const BlogsAllCard = styled(Card)(({ theme }) => ({
+export const BlogsCard = styled(Card)(({ theme }) => ({
     maxWidth: '100%',
     display: 'flex',
     border: '1px,solid #fff',
@@ -24,7 +24,7 @@ export const BlogsAllCard = styled(Card)(({ theme }) => ({
     }
 }))
 
-export const BlogsAllCardMedia = styled(CardMedia)(({ theme }) => ({
+export const BlogsCardMedia = styled(CardMedia)(({ theme }) => ({
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     position: 'relative',
@@ -38,22 +38,22 @@ export const BlogsAllCardMedia = styled(CardMedia)(({ theme }) => ({
     }
 }))
 
-export const BlogsAllCardContent = styled(CardContent)(({ theme }) => ({
+export const BlogsCardContent = styled(CardContent)(({ theme }) => ({
     padding: '15px',
     paddingBottom: '15px !important'
 }))
 
-export const BlogsAllTypographyTitle = styled(Typography)({
+export const BlogsTypographyTitle = styled(Typography)({
     fontWeight: '600',
     paddingBottom: '15px'
 })
 
-export const BlogsAllTypographyContent = styled(Typography)({
+export const BlogsTypographyContent = styled(Typography)({
     overflow: 'hidden',
     maxHeight: '155px'
 })
 
-export const BlogsAllBoxHover = styled(Box)({
+export const BlogsBoxHover = styled(Box)({
     position: 'absolute',
     width: '100%',
     height: '100%',
@@ -61,7 +61,7 @@ export const BlogsAllBoxHover = styled(Box)({
     background: 'rgb(0, 0, 0, 0.8)',
     transition: ' 2s ease',
 })
-export const BlogsAllButton = styled(Button)({
+export const BlogsButton = styled(Button)({
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -69,4 +69,4 @@ export const BlogsAllButton = styled(Button)({
     zIndex: '1',
     background: '#000',
 })
-// BlogsAll End
+// Blogs End

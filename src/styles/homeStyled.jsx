@@ -3,9 +3,8 @@ import { Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton 
 
 
 
-
-// AiNews Start
-export const AiNewsBox = styled(Box)(({ theme }) => ({
+// LatestAi Start
+export const LatestAiBox = styled(Box)(({ theme }) => ({
     padding: `${theme.spacing(15)} 0`,
     background: 'url("images/ai-news-background.png")',
     backgroundSize: '1100px 633px',
@@ -13,17 +12,21 @@ export const AiNewsBox = styled(Box)(({ theme }) => ({
     backgroundPosition: 'left',
     backgroundColor: theme.palette.primary.dark
 }))
-// AiNews End
+// LatestAi End
 
-// Trading Start
-export const TradingNewsBox = styled(Box)(({ theme }) => ({
+//  LatestTrading Start
+export const LatestTradingBox = styled(Box)(({ theme }) => ({
     padding: `${theme.spacing(15)} 0`,
     backgroundColor: theme.palette.primary.main
 }))
-// Trading End
+export const LatestTradingTypography = styled(Typography)(({ theme }) => ({
+    color: theme.palette.secondary.main,
+    textAlign: 'center'
+}))
+//  LatestTrading End
 
-// BlogNews Start
-export const BlogsNewsTypographyTitle = styled(Typography)(({ theme }) => ({
+// LatestBlogs Start
+export const LatestBlogsTypographyTitle = styled(Typography)(({ theme }) => ({
     color: theme.palette.secondary.main,
     marginBottom: theme.spacing(4),
     textAlign: 'left',
@@ -33,33 +36,33 @@ export const BlogsNewsTypographyTitle = styled(Typography)(({ theme }) => ({
     },
 }))
 
-export const BlogNewsCard = styled(Card)(({ theme }) => ({
+export const LatestBlogsCard = styled(Card)(({ theme }) => ({
     transition: "transform 0.2s ease-in-out",
     "&:hover": {
         transform: 'scale(1.03)'
     }
 }))
 
-export const BlogNewsCardMedia = styled(CardMedia)({
+export const LatestBlogsCardMedia = styled(CardMedia)({
     height: '254px'
 })
 
-export const BlogNewsCardContent = styled(CardContent)(({ theme }) => ({
+export const LatestBlogsCardContent = styled(CardContent)(({ theme }) => ({
     minHeight: '116px',
     [theme.breakpoints.down('md')]: {
         minHeight: '64px'
     }
 }))
 
-export const BlogNewsCardActions = styled(CardActions)({
+export const LatestBlogsCardActions = styled(CardActions)({
     padding: '8px 16px 16px'
 })
 
-export const BlogNewsTypographyButton = styled(Typography)({
+export const LatestBlogsTypographyButton = styled(Typography)({
     textTransform: 'capitalize'
 })
 
-export const BlogNewsPagination = styled('div')(({ theme }) => ({
+export const LatestBlogsPagination = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
     position: 'absolute',
@@ -73,15 +76,14 @@ export const BlogNewsPagination = styled('div')(({ theme }) => ({
         display: 'flex'
     }
 }))
-// BlogNews End
+// LatestBlogs End
 
 
-// WebinarPost Start
-export const WebinarCard = styled(Card)(({ theme }) => ({
+// NextWebinar Start
+export const NextWebinarCard = styled(Card)(({ theme }) => ({
     border: 'none',
     maxWidth: '385px',
     boxShadow: 'none',
-    flexGrow: 2,
     backgroundColor: theme.palette.secondary.dark,
     display: 'flex',
     justifyContent: 'space-around',
@@ -92,9 +94,13 @@ export const WebinarCard = styled(Card)(({ theme }) => ({
     }
 }))
 
-export const WebinarCardMedia = styled(CardMedia)({
+export const NextWebinarCardMedia = styled(CardMedia)({
     width: '100%',
-    maxWidth: '385px'
+    maxWidth: '385px',
+    height:'164px',
+    backgroundSize:'cover',
+    cursor:'pointer',
+    position:'relative'
 })
 
 export const WebinarIconButton = styled(IconButton)(({ theme }) => ({
@@ -109,9 +115,3 @@ export const WebinarIconButton = styled(IconButton)(({ theme }) => ({
 }))
 // WebinarPost End
 
-// TradingNews Start
-export const TradingNewsTypography = styled(Typography)(({ theme }) => ({
-    color: theme.palette.secondary.main,
-    textAlign: 'center'
-}))
-// TradingNews End
