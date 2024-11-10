@@ -8,12 +8,12 @@ import bannerData from '../../data/bannerData'
 import aiData from '../../data/aiData'
 import tradingData from '../../data/tradingData'
 import { Box, Container, Card, CardMedia, Stack, Typography } from '@mui/material';
+import { styled } from "@mui/material/styles";
 
 const Single = () => {
     const router = useRouter();
     const { id, newsType } = router.query;
     const [single, setSingle] = useState(null);
-
 
     useEffect(() => {
         if (id && newsType) {
@@ -29,6 +29,13 @@ const Single = () => {
 
     if (!single) return <p>Loading...</p>; // This will show until post is found
 
+    const SingleCard= styled(Card)(({theme})=>({
+        position: 'relative', display: 'flex', justifyContent: 'center', maxWidth: '1024px', height: '400px',
+        [theme.breakpoints.down('md')]:{
+            maxWidth:'1000px'
+        }
+    }))
+
     return (
         <>
             <NavBar />
@@ -36,13 +43,15 @@ const Single = () => {
             <Box sx={{ backgroundImage: "url('/images/ai-news-background.png')" }}>
                 <Container maxWidth="md" component='section' sx={{ padding: '80px 30px !important' }}>
                     <Stack gap='40px'>
-                        <Card sx={{ position: 'relative', display: 'flex', justifyContent: 'center', maxWidth: '1024px', height: '400px' }}>
+                        <SingleCard sx={{  }}>
                             <CardMedia
                                 component="img"
                                 src={single.image}
-                                title="bull runing">
+                                title="bull runing"
+                                alignItems='center'>
+                                    
                             </CardMedia>
-                        </Card>
+                        </SingleCard>
                         <Typography color='secondary' style={{ fontWeight: '600', textAlign: 'center' }}>{single.title}</Typography>
                         <Typography>
                             {single.content}

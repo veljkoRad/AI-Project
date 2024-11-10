@@ -16,7 +16,7 @@ export const BlogsCard = styled(Card)(({ theme }) => ({
     maxWidth: '100%',
     display: 'flex',
     border: '1px,solid #fff',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
         maxWidth: '450px',
         margin: 'auto',

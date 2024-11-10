@@ -23,7 +23,7 @@ const Blogs = ({ data, newsType }) => {
     return (
         <BlogsBox component='article' >
             <Container maxWidth="lg">
-                <Stack gap='50px'>
+                <Stack gap='50px'  alignItems='center'>
                     {data.map((item, index) => (
                         <BlogsCard key={index} >
                             <BlogsCardMedia

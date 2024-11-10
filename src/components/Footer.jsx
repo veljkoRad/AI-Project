@@ -11,8 +11,8 @@ const Footer = () => {
             component="footer"
         >
             <Container
-                maxWidth="md"
-                sx={{ padding: '34px 0 !important', }}
+                maxWidth="lg"
+                sx={{ padding: '34px 30px !important', }}
             >
                 <LogoIcon
                     component="img"

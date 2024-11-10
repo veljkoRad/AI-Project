@@ -11,7 +11,7 @@ const LatestTrading = ({ }) => {
         <LatestTradingBox component="section">
             <Container maxWidth="lg" >
                 <Stack sx={{ position: 'relative' }}>
-                    <LatestTradingTypography LatestTradingTypography variant="body2">Trading News</LatestTradingTypography>
+                    <LatestTradingTypography variant="body2">Trading News</LatestTradingTypography>
                     <Typography variant='h2' align='center' sx={{ margin: '5px 0 25px' }} >Dynamic <Box component='span' sx={{ color: '#00FBF4' }}>World of Trading</Box></Typography>
 
 

@@ -21,7 +21,7 @@ const Webinars = () => {
             <Banner data={bannerData.webinars} />
             <WebinarsBox >
                 <Container maxWidth="md" component='section' sx={{ padding: '80px 30px !important' }}>
-                    <Stack gap='40px'>
+                    <Stack gap='40px' alignItems='center'>
                         <WebinarsCard >
                             <CardMedia
                                 component="img"

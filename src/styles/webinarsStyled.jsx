@@ -21,10 +21,16 @@ export const WebinarsIconButton = styled(IconButton)(({ theme }) => ({
     },
 }))
 
-export const WebinarsCard = styled(Card)({
+export const WebinarsCard = styled(Card)(({theme})=>({
     position: 'relative',
     display: 'flex',
     justifyContent: 'center',
-    maxWidth: '1024px'
-})
+    width:"100%",
+    maxWidth: '1024px',
+    [theme.breakpoints.down('md')]:{
+        maxWidth:'930px'
+    }
+
+
+}))
 

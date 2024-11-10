@@ -66,7 +66,8 @@ const LatestBlogs = ({ paginationClass, newsData, newsType }) => {
                     style={{
                         display: 'flex',
                         justifyContent: 'center',
-                        position: 'relative'
+                        position: 'relative',
+                        margin:'0'
                     }}
                 >
                     {SinglePost.map((post, index) => (

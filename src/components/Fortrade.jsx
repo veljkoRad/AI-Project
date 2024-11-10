@@ -1,39 +1,66 @@
 import React from 'react'
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material'
+import { styled } from '@mui/material/styles'
 
 
 const Fortrade = () => {
 
+    const FortradeCard = styled(Card)(({theme})=> ({
+        display: 'flex', 
+        maxWidth: '100%', 
+        justifyContent:'space-between',
+        [theme.breakpoints.down('md')]:{
+            flexDirection:'column-reverse',
+            maxWidth:'450px'
+        }
+    }))
 
+    const FortradeCardContent = styled(Card)(({theme})=> ({
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between',
+        alignItems:'flex-start',
+        padding:'20px',
+        border:'none',
+        gap:'16px'
+    }))
+
+    const FortradeCardMedia = styled(Card)(({theme})=> ({
+        backgroundImage: `url("/images/FT-banner.png")`,
+        backgroundColor: '#02706d',
+        backgroundSize: '768px 250px',
+        backgroundPosition: 'center',
+        position: 'relative',
+        cursor: 'pointer',
+        minWidth: '768px',
+        height: '250px',
+        border:'none',
+        [theme.breakpoints.down('md')]:{
+            backgroundPosition:'-200px'
+        }
+    }))
 
 
     return (
-        <Card sx={{
-            display: 'flex', maxWidth: '100%'
+        <FortradeCard sx={{
+            
         }}>
           
-            <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} >
-                <Typography>Your trading Journey starts here</Typography>
-                <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ducimus quisquam numquam libero reprehenderit sint non molestiae modi, praesentium obcaecati aliquid aliquam? Unde, recusandae!</Typography>
-                <Button variant='outlined' color='secondary'>
+            <FortradeCardContent  >
+                <Typography color='secondary' variant='body1' sx={{fontWeight:'600'}}>Your trading Journey starts here</Typography>
+                <Typography> Create a demo account</Typography>
+                <Button variant='outlined' color='secondary' size='large'>
                     <Typography variant='button' sx={{ textTransform: 'capitalize' }}>Get Started</Typography>
                 </Button>
-            </CardContent>
-            <CardMedia component='div'
+            </FortradeCardContent>
+            <FortradeCardMedia component='div'
                 sx={{
-                    backgroundImage: `url("/images/fortrade-logo.png")`,
-                    backgroundColor: '#02706d',
-                    backgroundSize: '250px 71px',
-                    backgroundPosition: 'center',
-                    position: 'relative',
-                    cursor: 'pointer',
-                    minWidth: '768px',
-                    height: '250px',
+                   
                 }}>
-            </CardMedia>
+            </FortradeCardMedia>
 
 
-        </Card >
+        </FortradeCard >
     )
 }
 

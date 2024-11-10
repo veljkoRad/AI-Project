@@ -52,7 +52,7 @@ const NextWebinar = () => {
                                 {  hover== 1 && (
                                     <Box  sx={{position:'absolute',background:'#000',width:'100%',height:'100%', opacity:'0.8', zIndex:'2'}}>
                                     <Button sx={{
-                                        position:'absolute', top:'50%',left:'50%',transform:'translate(-50%, -50%)',textTransform:'capitalize',zIndex:'3'
+                                        position:'absolute', top:'50%',left:'50%',transform:'translate(-50%, -50%)',textTransform:'capitalize',zIndex:'3','&:hover':{background:'#00FBF4'}
                                     }} color='secondary'size='large' variant='contained' ><Typography variant='body2' color='primary'>Sign Up</Typography></Button>
                                     </Box>
                                     )                                    
