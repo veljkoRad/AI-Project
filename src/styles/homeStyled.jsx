@@ -100,7 +100,8 @@ export const NextWebinarCardMedia = styled(CardMedia)({
     height:'164px',
     backgroundSize:'cover',
     cursor:'pointer',
-    position:'relative'
+    position:'relative',
+    border:'3px solid #00FBF4'
 })
 
 export const WebinarIconButton = styled(IconButton)(({ theme }) => ({
