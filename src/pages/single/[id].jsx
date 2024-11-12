@@ -40,7 +40,7 @@ const Single = () => {
         <>
             <NavBar />
             <Banner data={newsType === 'ai-news' ? bannerData.aiNews : bannerData.trading} />
-            <Box sx={{ backgroundImage: "url('/images/ai-news-background.png')" }}>
+            <Box sx={{ backgroundImage: "url('/images/ai-news-background.png')",backgroundColor:'primary.dark' }}>
                 <Container maxWidth="md" component='section' sx={{ padding: '80px 30px !important' }}>
                     <Stack gap='40px'>
                         <SingleCard sx={{  }}>
