@@ -184,6 +184,12 @@
 * **NextWebinar.jsx** added to home
 * **Fortrade.jsx** Added to BlogsAll
 
+### 13.11.2024.
+*  **Popup.jsx**
+  * Added Popup component to home pages wich covers whole homepage
+  * Added **popupData.jsx** where I added titles images and links for cards
+  * Copied Latestblogs in this file so I can manipulate with links
+
 
 
 

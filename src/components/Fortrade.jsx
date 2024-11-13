@@ -22,7 +22,8 @@ const Fortrade = () => {
         alignItems:'flex-start',
         padding:'20px',
         border:'none',
-        gap:'16px'
+        gap:'16px',
+        minWidth:'450px'
     }))
 
     const FortradeCardMedia = styled(Card)(({theme})=> ({

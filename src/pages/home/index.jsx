@@ -7,6 +7,7 @@ import Footer from "../../Components/Footer"
 // Styles
 import LatestAi from "./LatestAi"
 import bannerData from "../../data/bannerData"
+import Popup from "../../components/Popup"
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
 
     return (
         <>
+            <Popup />
             <NavBar />
             <Banner data={bannerData.home} />
             <LatestAi />

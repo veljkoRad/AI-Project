@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Fortrade from "../../components/Fortrade";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper/modules";
 import 'swiper/css/bundle'; //for Styling Pagination dots
@@ -67,7 +66,7 @@ const LatestBlogs = ({ paginationClass, newsData, newsType }) => {
                         display: 'flex',
                         justifyContent: 'center',
                         position: 'relative',
-                        margin:'0'
+                        margin: '0'
                     }}
                 >
                     {SinglePost.map((post, index) => (
